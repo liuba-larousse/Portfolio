@@ -1,0 +1,42 @@
+@import './resets' ,'./global-variables';
+
+
+
+.links{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: left;
+    width: 100%;
+    height:100%;
+    position: absolute;
+    z-index: 10;
+    background-color: $clr-dt-bkg-darker;
+    padding-left: 2rem;
+}
+
+.link{
+    @extend %h2;  
+    color: $clr-dt-primary;
+   letter-spacing: 1rem;
+   display: inline-block;
+   transform: scaleY(0.9);
+}
+
+
+
+
+//     // Small devices (tablets, 768px and up)
+// @media (min-width: 36em) { 
+//     .nav-links{
+//         width: 50%;
+//         top: 4rem*$scaleSmall
+//     } 
+//  }
+//   // Medium devices (tablets, 768px and up)
+// @media (min-width: 48em) { 
+//     .nav-links{
+//         width: 50%;
+//         top: 4rem*$scaleMedium;
+//     } 
+// }

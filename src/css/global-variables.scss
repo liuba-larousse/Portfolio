@@ -1,0 +1,110 @@
+/*
+=============== 
+Global Styles
+===============
+*/
+
+
+$clr-dt-primary: #da2c4a;
+$clr-dt-primary-100: #FFCDD2;
+$clr-dt-primary-200: #EF9A9A;
+$clr-dt-primary-300: #E57373;
+$clr-dt-primary-700: #da1737;
+
+$clr-dt-bkg-darker: #252525;
+$clr-dt-bkg-lighter: #424242;
+
+$clr-dt-text-primarly: #fff;
+$clr-dt-text-secondarly:rgba(255, 255, 255, 0.7);
+
+$main-font:'ff-typestar-ocr-web-pro', sans-serif;
+$secondary-font: 'Overpass Mono', monospace;
+
+$transition: all 0.3s linear;
+$spacing: 0.2rem;
+$radius: 0.25rem;
+
+$scaleSmall: 1.5;
+$scaleMedium: 1.7;
+$scaleLarge:2;
+
+$marginLg: 2.75rem;
+$marginMd: 1.75rem;
+$marginSm: 1rem;
+
+/*
+=============== 
+Fonts
+===============
+*/
+
+html { font-size: 62.5%; } 
+body { font-size: 21px; 
+position: relative}
+
+@import url("https://fonts.googleapis.com/css2?family=Overpass+Mono:wght@300;400;600;700&family=Roboto:wght@100;300;400;500&display=swap");
+@import url("https://use.typekit.net/sxg0dxz.css");
+
+body {
+  background-color: $clr-dt-bkg-darker;
+  font-family: 'ff-typestar-ocr-web-pro', sans-serif;
+  font-weight: 400;
+  line-height: 1.65;
+  color: $clr-dt-text-primarly;
+
+}
+
+p , %p {
+    font-family: $secondary-font;
+    margin-bottom: 1rem;}
+
+h1, h2, h3, h4, h5 {
+  margin: 2rem 0 1.05rem;
+  font-family: $main-font;
+  font-weight: 400;
+  line-height: 1.15;
+}
+
+h1 ,%h1 {font-size: 3.35rem;}
+
+h2,%h2 {font-size: 2.6rem;
+    text-transform:capitalize; 
+    font-weight: 300;}
+
+h3,%h3 {font-size: 1.55rem;
+    text-transform:capitalize}
+
+h4,%h4 {font-size: 1.4rem;
+    text-transform:capitalize}
+
+h5,%h5 {font-size: 1.05rem;
+    text-transform:capitalize}
+
+small, .text_small , %h6 {font-size: 0.75rem;
+    text-transform:capitalize}
+
+// Small devices (landscape phones, 576px and up)
+@media (min-width: 28em) { 
+    h1 ,%h1 {font-size: 3.35rem*$scaleSmall;}
+    h2,%h2 {font-size: 2.6rem*$scaleSmall;;}
+    h3,%h3 {font-size: 1.55rem*$scaleSmall;}
+    h4,%h4 {font-size: 1.4rem*$scaleSmall;} 
+    h5,%h5 {font-size: 1.05rem*$scaleSmall;}
+ }
+
+ // Medium devices (tablets, 768px and up)
+@media (min-width: 48em) { 
+    h1 ,%h1 {font-size: 3.35rem*$scaleMedium;}
+    h2,%h2 {font-size: 2.6rem*$scaleMedium;}
+    h3,%h3 {font-size: 1.55rem*$scaleMedium;}
+    h4,%h4 {font-size: 1.4rem*$scaleMedium;} 
+    h5,%h5 {font-size: 1.05rem*$scaleMedium;}
+ }
+// Large devices (desktops, 992px and up)
+@media (min-width: 62em) {
+    h1 ,%h1 {font-size: 3.35rem*$scaleLarge;}
+    h2,%h2 {font-size: 2.6rem*$scaleLarge;}
+    h3,%h3 {font-size: 1.55rem*$scaleLarge;}
+    h4,%h4 {font-size: 1.4rem*$scaleLarge;} 
+    h5,%h5 {font-size: 1.05rem*$scaleLarge;}
+}

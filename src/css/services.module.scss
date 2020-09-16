@@ -1,0 +1,100 @@
+@import './resets' ,'./global-variables';
+
+
+$border: 0.8rem;
+$color: #da2c4a;
+
+.section{
+    display:flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    
+}
+
+.container {
+  width: 30rem;
+  height: calc(30rem / 4 * 3);
+  margin: 2rem;
+  display: grid;
+  align-self: center;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr;
+  grid-template-areas:
+    "top"
+    "bottom"
+    "bottom"
+    "bottom";
+}
+
+.top {
+  border: $border solid $color;
+  border-top-right-radius: 20px;
+  border-top-left-radius: 20px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr;
+  grid-template-areas: "c1 c2 c3 . . .";
+  grid-area: top;
+}
+
+.c1 {
+  grid-area: c1;
+}
+
+.c2 {
+  grid-area: c2;
+}
+
+.c3 {
+  grid-area: c3;
+}
+
+.c1,
+.c2,
+.c3 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.circle {
+  width: 2.5rem;
+  height: 2.5rem;
+  background-color: #f5cc51;
+  border-radius: 50px;
+  border: $border solid $color;
+  margin: 0.8rem auto;
+}
+
+.bottom {
+  grid-area: bottom;
+  border-left: $border solid $color;
+  border-right: $border solid $color;
+  border-bottom: $border solid $color;
+  border-bottom-right-radius: 20px;
+  border-bottom-left-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+}
+
+$scale: 1.8;
+// // Medium devices (tablets, 768px and up)
+@media (min-width: 48em) {
+  .container  {
+    width: 30rem * $scale;
+    height: 30rem* $scale / 4 * 3;
+  }
+  .section{
+    height: 100vh;
+    display:flex;
+    flex-direction: row;
+    align-items:center;
+
+  }
+  .circle {
+    width: 2.5rem*$scale;
+    height: 2.5rem*$scale;
+  }
+}
