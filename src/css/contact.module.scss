@@ -1,0 +1,245 @@
+@import './resets' ,'./global-variables';
+
+/*
+=============== 
+Contact form
+===============
+*/
+
+
+$border-circle:0.5rem;
+$color: $clr-dt-primary;
+$width: 25rem;
+$height:$width * 2;
+$scale: 1.8;
+
+.section {
+    width:100vw;
+    height: 80vh;
+    position: relative;
+}
+
+.front{
+    position: absolute;
+    z-index: 2;
+    display: flex;
+    top: 50%;  /* position the top  edge of the element at the middle of the parent */
+    left: 50%; /* position the left edge of the element at the middle of the parent */
+    transform: translate(-50%, -50%);
+  
+}
+.back{
+    position: absolute;
+    z-index: -1;
+    top: 50%;  /* position the top  edge of the element at the middle of the parent */
+    left: 50%; /* position the left edge of the element at the middle of the parent */
+    transform: translate(-58%, -58%);
+   
+}
+
+.container {
+    width: $width;
+    height: $height;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 15% 85%;
+  grid-template-areas:
+    "top"
+    "bottom"
+   ;
+}
+
+.top {
+  border: $border solid $color;
+  border-top-right-radius: 20px;
+  border-top-left-radius: 20px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 3fr;
+  grid-template-rows: 1fr;
+  grid-template-areas: "c1 c2 c3 . ";
+  grid-area: top;
+  background-color: $clr-dt-bkg-darker;
+}
+
+.c1 {
+  grid-area: c1;
+}
+
+.c2 {
+  grid-area: c2;
+}
+
+.c3 {
+  grid-area: c3;
+}
+
+.c1,
+.c2,
+.c3 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.circle {
+    width: 2.5rem;
+    height: 2.5rem;
+    background-color: #f5cc51;
+    border-radius: 50px;
+    border: $border-circle solid $color;
+    margin: 0.8rem auto;
+}
+.circle:hover{
+  background-color: $clr-dt-text-primarly;
+  }
+
+.bottom {
+  grid-area: bottom;
+  border-left: $border solid $color;
+  border-right: $border solid $color;
+  border-bottom: $border solid $color;
+  border-bottom-right-radius: 20px;
+  border-bottom-left-radius: 20px;
+  background-color: $clr-dt-bkg-darker;
+  display:grid;
+  grid-template-columns: 10% 90%;
+  grid-template-rows: 1fr;
+  grid-template-areas: "soc text";
+  padding: 0.5rem;
+}
+
+p{
+    grid-area: text;
+    display: flex;
+    text-align: start;
+    margin: 1rem;
+}
+
+// links
+
+.links{
+    grid-area: soc;
+    display: flex;
+    flex-direction: column;
+   justify-content: space-around;
+    }
+    
+.links a{
+    color:$clr-dt-primary;
+    font-size: 2.8rem;
+    align-self: center;
+    
+    }
+.links a:hover{
+    animation-name: flash-link;
+    animation-duration: 1s;
+    animation-fill-mode: both;
+    }
+    @keyframes flash-link { 
+        0%, 50%, 100% {color:$clr-dt-text-primarly}
+        25%, 75% {color:$clr-dt-primary}
+        }  
+
+@media (min-width: 48em) { 
+p{
+ width: 84%;
+justify-self: center;
+}
+.links{
+flex-direction: row;
+justify-content: space-around;
+width: 100%;
+margin-top: $marginLg;
+}
+.links a{
+font-size: 3.5rem;
+}
+}
+
+
+// // Medium devices (tablets, 768px and up)
+@media (min-width: 48em) {
+$width: 40rem;
+$height:$width / 2;
+    .container  {
+      width: $width * $scale;
+      height: $height* $scale;
+      grid-template-rows: 25% 75%;
+    }
+    .bottom {
+    grid-template-columns: 1fr;
+    grid-template-rows: 60% 40%;
+    grid-template-areas: 
+    "text "
+    "soc";
+    }
+    .circle {
+      width: 2.5rem*$scale;
+      height: 2.5rem*$scale;
+      border: $border-circle*$scale solid $color;
+    }
+ 
+  }
+
+//button
+
+ .button {
+    width: $width;
+    border-radius: 10px;
+    background-color:$clr-dt-bkg-darker;
+    border: $border solid $clr-dt-primary;
+    padding: 0.5rem ;
+    text-align: center;
+    cursor: pointer;
+    font-family: $main-font;
+    font-size: 2.1rem;
+    color:$clr-dt-primary;
+    position: absolute;
+    z-index: 3;
+    top: 5%;  /* position the top  edge of the element at the middle of the parent */
+    left: 50%; /* position the left edge of the element at the middle of the parent */
+    transform: translate(-50%, -50%);
+ }
+ .button {
+    animation-name: flash-wait;
+    animation-duration: 30s;
+    animation-fill-mode: both;
+    animation-iteration-count: infinite;
+}
+.button:hover,
+.button:active,
+.button:focus{
+    color: $clr-dt-text-primarly;
+}
+
+@keyframes flash-wait { 
+// {background-color:$clr-dt-text-primarly}
+// {background-color:$clr-dt-bkg-darker}
+
+0% {
+    background-color:$clr-dt-text-primarly
+  }
+  0.192% {
+    background-color:$clr-dt-bkg-darker
+  }
+  0.385% {
+    background-color:$clr-dt-text-primarly
+  }
+  0.577% {
+    background-color:$clr-dt-bkg-darker
+  }
+  0.769% {
+    background-color:$clr-dt-text-primarly
+  }
+  1% {
+    background-color:$clr-dt-bkg-darker
+  }
+  100% {
+    background-color:$clr-dt-bkg-darker
+  }
+}
+
+ .icon{
+     font-size: 2.8rem;
+     vertical-align: middle;
+ }

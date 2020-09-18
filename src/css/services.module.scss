@@ -1,0 +1,141 @@
+@import './resets' ,'./global-variables';
+
+
+
+$border-circle:0.5rem;
+$color: $clr-dt-primary;
+$width: 30rem;
+$height:30rem / 4 * 3;
+$scale: 1.8;
+
+h1{
+    text-align: center;
+}
+
+.section{
+  
+    display:flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.container {
+  width: $width;
+  height: $height;
+  margin: 2rem;
+  display: grid;
+  align-self: center;
+  grid-template-columns: 1fr;
+  grid-template-rows: 20% 80%;
+  grid-template-areas:
+    "top"
+    "bottom"
+   ;
+}
+
+.container:hover,
+.container:focus,
+.container:active
+{
+ transform: scale(1.1, 1.1);
+ transition-duration: 0.8s;
+ transition-timing-function: ease-out;
+  }
+
+.top {
+  border: $border solid $color;
+  border-top-right-radius: 20px;
+  border-top-left-radius: 20px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr;
+  grid-template-areas: "c1 c2 c3 . . .";
+  grid-area: top;
+}
+
+.c1 {
+  grid-area: c1;
+}
+
+.c2 {
+  grid-area: c2;
+}
+
+.c3 {
+  grid-area: c3;
+}
+
+.c1,
+.c2,
+.c3 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.circle {
+  width: 2.5rem;
+  height: 2.5rem;
+  background-color: #f5cc51;
+  border-radius: 50px;
+  border: $border-circle solid $color;
+  margin: 0.8rem auto;
+}
+.circle:hover{
+  background-color: $clr-dt-text-primarly;
+  }
+
+.bottom {
+  grid-area: bottom;
+  border-left: $border solid $color;
+  border-right: $border solid $color;
+  border-bottom: $border solid $color;
+  border-bottom-right-radius: 20px;
+  border-bottom-left-radius: 20px;
+  position: relative;
+}
+
+
+// // Medium devices (tablets, 768px and up)
+@media (min-width: 48em) {
+  .container  {
+    width: $width * $scale;
+    height: $height* $scale;
+  }
+  .section{
+
+    display:flex;
+    flex-direction: row;
+    align-items:center;
+  }
+  .circle {
+    width: 2.5rem*$scale;
+    height: 2.5rem*$scale;
+    border: $border-circle*$scale solid $color;
+  }
+}
+
+.img{
+    position: absolute; 
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+    border-radius:$radius;
+}
+
+.text{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    &.text h2, h4{
+width: 80%;
+align-self: center;
+    }
+}
+
+

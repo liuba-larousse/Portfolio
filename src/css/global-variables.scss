@@ -1,0 +1,134 @@
+/*
+=============== 
+Global Styles
+===============
+*/
+
+/*
+=============== 
+Colors
+===============
+*/
+
+$clr-dt-primary: #d54062;
+
+$clr-dt-primary-100: #FFCDD2;
+$clr-dt-primary-200: #EF9A9A;
+$clr-dt-primary-300: #E57373;
+$clr-dt-primary-700: #da1737;
+
+$clr-dt-bkg-darker: #252525;
+$clr-dt-bkg-lighter: #424242;
+
+$clr-dt-text-primarly: #fff;
+$clr-dt-text-secondarly:rgba(255, 255, 255, 0.7);
+
+/*
+=============== 
+Spacing/borders
+===============
+*/
+
+$transition: all 0.3s linear;
+$spacing: 0.2rem;
+$radius: 1.5rem;
+
+$marginLg: 2.75rem;
+$marginMd: 1.75rem;
+$marginSm: 1rem;
+
+$border: 0.1rem;
+$shadow:5px 5px 12px 1px rgba(0,0,0,0.5);
+
+
+
+/*
+=============== 
+Fonts
+===============
+*/
+
+html { font-size: 62.5%; } 
+body { 
+    font-size: 16px; 
+    background-color: $clr-dt-bkg-darker;
+    line-height: 1.65;
+    color: $clr-dt-text-primarly;
+  }
+
+@import url("https://fonts.googleapis.com/css2?family=Overpass+Mono:wght@300;400;600;700&family=Roboto:wght@100;300;400;500&display=swap");
+@import url("https://use.typekit.net/sxg0dxz.css");
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400&display=swap");
+$main-font:'ff-typestar-ocr-web-pro', sans-serif;
+$secondary-font: 'Quicksand', sans-serif;
+
+$font-h1:3.35rem;
+$font-h2:2.6rem;
+$font-h3:1.55rem;
+$font-h4:1.4rem;
+$font-h5:1.05rem;
+$font-p:1.55rem;
+$font-small:0.75rem;
+
+p {
+    font-size: $font-p;
+    font-family: $secondary-font;
+    font-weight: 300;
+    margin-bottom: 1rem;}
+
+h1, h2, h3, h4, h5 {
+  margin: 2rem 0 1.05rem;
+  font-family: $main-font;
+  font-weight: 300;
+  line-height: 1.15;
+}
+
+h1 {
+    font-size: $font-h1;
+    text-transform:capitalize}
+h2 {font-size: $font-h2;}
+h3 {font-size: $font-h3; }
+h4 {font-size: $font-h4;}
+h5 {font-size: $font-h5;}
+small  {font-size: $font-small;}
+
+$scaleSmall: 1.1;
+$scaleMedium: 1.3;
+$scaleLarge:1.5;
+// Small devices (landscape phones, 576px and up)
+@media (min-width: 28em) { 
+    h1  {font-size: $font-h1*$scaleSmall;}
+    h2 {font-size: $font-h2*$scaleSmall;;}
+    h3 {font-size: $font-h3*$scaleSmall;}
+    h4  {font-size: $font-h4*$scaleSmall;} 
+    h5  {font-size: $font-h5*$scaleSmall;}
+    p {
+        font-size: $font-p*$scaleSmall;}
+    small ,.text_small{font-size: $font-small;
+    }
+ }
+
+ // Medium devices (tablets, 768px and up)
+@media (min-width: 48em) { 
+    h1  {font-size: $font-h1*$scaleMedium;}
+    h2 {font-size: $font-h2*$scaleMedium;;}
+    h3  {font-size: $font-h3*$scaleMedium;}
+    h4  {font-size: $font-h4*$scaleMedium;} 
+    h5 {font-size: $font-h5*$scaleMedium;}
+    p {
+        font-size: $font-p*$scaleMedium;}
+    small, .text_small {font-size: $font-small*$scaleMedium;
+    }
+ }
+// Large devices (desktops, 992px and up)
+@media (min-width: 62em) {
+    h1 ,%h1 {font-size: $font-h1*$scaleLarge;}
+    h2,%h2 {font-size: $font-h2*$scaleLarge;;}
+    h3,%h3 {font-size: $font-h3*$scaleLarge;}
+    h4,%h4 {font-size: $font-h4*$scaleLarge;} 
+    h5,%h5 {font-size: $font-h5*$scaleLarge;}
+    p {
+        font-size: $font-p*$scaleLarge;}
+    small, .text_small  {font-size: $font-small*$scaleLarge;
+    }
+}
