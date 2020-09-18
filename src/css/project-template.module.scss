@@ -12,10 +12,12 @@ Project Template
     margin: 0 auto;
     width: 80%;
     padding-bottom: $marginMd;
+  
   }
 .container,.container>*{
 margin-top: $marginLg;
 margin-bottom: $marginLg;
+text-align: justify;
 }
   
  // Small devices (landscape phones, 576px and up)

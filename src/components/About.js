@@ -1,6 +1,7 @@
 import React from "react"
 import { social } from "./socialMedia"
 import styles from "../css/soc-links.module.scss"
+import { Link } from "gatsby"
 
 export default function About() {
   const links = [...social]
@@ -11,8 +12,10 @@ export default function About() {
           <h3>
             <span className="anim-type">Hi, I`m Liuba</span>
           </h3>
-          <h1>Web Designer</h1>
-          <button>contact me</button>
+          <h1>Web Developer</h1>
+          <Link to="/contact">
+            <button>Contact me</button>
+          </Link>
           <h3>
             {" "}
             I will code your dreams into{" "}

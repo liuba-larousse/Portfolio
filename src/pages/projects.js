@@ -3,6 +3,7 @@ import Layout from "../components/Layout"
 import { graphql } from "gatsby"
 import Img from "gatsby-image"
 import { Link } from "gatsby"
+import styles from "../css/projects.module.scss"
 
 export default function projectsPage({
   data: {
@@ -11,23 +12,29 @@ export default function projectsPage({
 }) {
   console.log(nodes)
   return (
-    <Layout className="layout">
-      <div className="container-projects">
-        {nodes.map(node => {
-          return (
-            <Link
-              key={node.id}
-              to={`/projects/${node.slug}`}
-              className="project-cover"
-            >
-              <Img
-                className="project-cover"
-                fluid={node.image.childImageSharp.fluid}
-              />
-            </Link>
-          )
-        })}
-      </div>
+    <Layout>
+      <section className={styles.section}>
+        <h1>Projects</h1>
+        <div className={styles.container}>
+          {nodes.map(node => {
+            return (
+              <Link
+                key={node.id}
+                to={`/projects/${node.slug}`}
+                className={styles.cover}
+              >
+                <div className={styles.title}>
+                  <span>{node.title}</span>
+                </div>
+                <Img
+                  className={`${styles.cover} ${styles.image}`}
+                  fluid={node.image.childImageSharp.fluid}
+                />
+              </Link>
+            )
+          })}
+        </div>
+      </section>
     </Layout>
   )
 }
@@ -41,10 +48,7 @@ export const query = graphql`
         title
         image {
           childImageSharp {
-            fluid(
-              fit: COVER
-              duotone: { highlight: "#da1737", shadow: "#252525", opacity: 50 }
-            ) {
+            fluid(fit: COVER) {
               ...GatsbyImageSharpFluid
             }
           }
@@ -53,3 +57,4 @@ export const query = graphql`
     }
   }
 `
+// duotone: { highlight: "#da1737", shadow: "#252525", opacity: 50 }

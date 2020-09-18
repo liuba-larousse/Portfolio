@@ -1,29 +1,48 @@
 @import './resets' ,'./global-variables';
 
 
-
 .links{
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: flex-start;
     text-align: left;
-    width: 100%;
+    width: 50%;
     height:100%;
     position: absolute;
     z-index: 10;
-    background-color: $clr-dt-bkg-darker;
+    background-color: transparent;
+    // backdrop-filter: blur(10px);
     padding-left: 2rem;
 }
 
 .link{
-    @extend %h2;  
-    color: $clr-dt-primary;
+   color: $clr-dt-primary;
    letter-spacing: 1rem;
-   display: inline-block;
+   display: block;
    transform: scaleY(0.9);
+   min-width: fit-content;
+   width: 50vw;
+   border-bottom: $border solid $clr-dt-primary;
+   transition: 0.5s ease-in-out;
+   h2{
+       text-transform: uppercase;
+   }
+}
+.link:hover,
+.link:active{
+    width: 55vw;
 }
 
-
+@media (min-width: 48em) { 
+    .links{width: 30%}
+    .link{
+        width: 30vw;
+    }
+    .link:hover,
+.link:active{
+    width: 35vw;
+}
+}
 
 
 //     // Small devices (tablets, 768px and up)

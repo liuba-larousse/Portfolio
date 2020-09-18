@@ -16,7 +16,7 @@ export default function Home() {
       className="main-bkg"
       fluid={nodes[0].childImageSharp.fluid}
     >
-      <Layout>
+      <Layout className="layout">
         <About />
       </Layout>
     </BackgroundImage>

@@ -17,8 +17,14 @@ export default function Services({ service, fluid }) {
         </div>
       </div>
       <div className={styles.bottom}>
-        <Img className="image" fluid={fluid} />
-        <h2>{service}</h2>
+        <div className={styles.text}>
+          <h2>{service}</h2>
+          <h4>
+            Lorem Ipsum is simply dummy text of the printing and typesetting
+            industry.{" "}
+          </h4>
+        </div>
+        <Img className={styles.img} fluid={fluid}></Img>
       </div>
     </div>
   )
