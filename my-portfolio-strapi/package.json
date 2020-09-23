@@ -11,7 +11,8 @@
   },
   "devDependencies": {},
   "dependencies": {
-    "knex": "<0.20.0",
+    "jquery": "^3.5.1",
+    "knex": "^0.20.15",
     "pg": "^8.3.3",
     "pg-connection-string": "^2.3.0",
     "sqlite3": "latest",
