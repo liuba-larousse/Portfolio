@@ -7,8 +7,8 @@ const path = require("path")
 
 module.exports = {
   siteMetadata: {
-    title: "My Portfolio",
-    description: "Portfolio",
+    title: "Portfolio",
+    description: "My portfolio",
   },
   /* Your site config here */
   plugins: [
@@ -17,19 +17,27 @@ module.exports = {
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     `gatsby-plugin-styled-components`,
+    `gatsby-plugin-smoothscroll`,
     {
-      resolve: `gatsby-source-strapi`,
+      resolve: `gatsby-plugin-scroll-reveal`,
       options: {
-        apiURL: `http://localhost:1337`,
-        queryLimit: 1000, // Default to 100
-        contentTypes: [`project`],
-        //If using single types place them in this array.
-        // singleTypes: [`home-page`, `contact`],
-        // Possibility to login with a strapi user, when content types are not publically available (optional).
-        loginData: {
-          identifier: "",
-          password: "",
-        },
+        threshold: 0.3, // Percentage of an element's area that needs to be visible to launch animation
+        once: true, // Defines if animation needs to be launched once
+        disable: false, // Flag for disabling animations
+
+        // Advanced Options
+        selector: "[data-sal]", // Selector of the elements to be animated
+        animateClassName: "sal-animate", // Class name which triggers animation
+        disabledClassName: "sal-disabled", // Class name which defines the disabled state
+        rootMargin: "0% 25%", // Corresponds to root's bounding box margin
+        enterEventName: "sal:in", // Enter event name
+        exitEventName: "sal:out", // Exit event name
+      },
+    },
+    {
+      resolve: "gatsby-plugin-root-import",
+      options: {
+        "~": path.join(__dirname, "src/"),
       },
     },
     {

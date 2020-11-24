@@ -1,0 +1,88 @@
+@import "~/css/global-variables.module.scss";
+
+.section {
+  position: relative;
+  height: 20rem;
+  width: auto;
+}
+
+.hr {
+  position: absolute;
+  top: 50%;
+  width: 100vw;
+  height: 1px;
+  background: linear-gradient(
+    90deg,
+    rgba(214, 65, 98, 0) 0%,
+    rgba(214, 65, 98, 1) 20%,
+    rgba(214, 65, 98, 1) 70%,
+    rgba(214, 65, 98, 0) 100%
+  );
+  z-index: 10;
+}
+
+.hrAnimate {
+  animation-name: expand;
+  animation-duration: 1s;
+  animation-timing-function: ease-in-out;
+}
+
+@keyframes expand {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100vw;
+  }
+}
+
+.circle {
+  width: 3rem;
+  height: 3rem;
+  background-color: $clr-bkg-darker;
+  border-radius: 50px;
+  border: 1px solid $clr-primary;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translateY(-50%);
+  margin-left: -1.5rem;
+  z-index: 11;
+}
+.circle:hover {
+  background-color: white;
+}
+
+.vl {
+  // border-left: 1px solid #d64162;
+  background: linear-gradient(
+    0deg,
+    rgba(214, 65, 98, 0) 0%,
+    rgba(214, 65, 98, 1) 20%,
+    rgba(214, 65, 98, 1) 70%,
+    rgba(214, 65, 98, 0) 100%
+  );
+  width: 1px;
+  height: 100%;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  margin-left: -0.5px;
+  z-index: 10;
+  transform: translateY(-50%);
+}
+
+.vlAnimate {
+  animation-name: expand-vertical;
+  animation-duration: 1s;
+  animation-timing-function: ease-in-out;
+}
+
+@keyframes expand-vertical {
+  from {
+    height: 0;
+  }
+  to {
+    height: 100%;
+  }
+}

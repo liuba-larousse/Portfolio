@@ -1,8 +1,9 @@
 import React from "react"
-import Layout from "../components/Layout"
+import Layout from "~/components/Layout/Layout"
 import styles from "../css/about.module.scss"
 import Img from "gatsby-image"
 import { Link } from "gatsby"
+import { graphql } from "gatsby"
 
 export default function aboutPage({ data }) {
   console.log(data)

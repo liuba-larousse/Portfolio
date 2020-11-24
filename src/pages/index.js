@@ -1,38 +1,23 @@
 import React from "react"
-import Layout from "../components/Layout"
-import About from "../components/About"
-import { graphql, useStaticQuery } from "gatsby"
-import BackgroundImage from "gatsby-background-image"
+import Layout from "~/components/Layout/Layout"
+import Hero from "~/components/Hero/Hero"
+import MyServices from "~/components/MyServices/MyServices"
+import Projects from "~/components/Projects/Projects"
+import Contact from "~/components/Contact/Contact"
 
 import "../css/main.scss"
 
 export default function Home() {
-  const {
-    bkgImg: { nodes },
-  } = useStaticQuery(query)
-
   return (
-    <BackgroundImage
-      className="main-bkg"
-      fluid={nodes[0].childImageSharp.fluid}
-    >
-      <Layout className="layout">
-        <About />
-      </Layout>
-    </BackgroundImage>
+    <Layout>
+      <Hero />
+      <div class="parallax"></div>
+      <MyServices />
+      <div class="parallax"></div>
+      <Projects />
+      <div class="parallax full_height">
+        <Contact />
+      </div>
+    </Layout>
   )
 }
-
-export const query = graphql`
-  {
-    bkgImg: allFile(filter: { relativePath: { eq: "bkg-img-dark.jpg" } }) {
-      nodes {
-        childImageSharp {
-          fluid {
-            ...GatsbyImageSharpFluid
-          }
-        }
-      }
-    }
-  }
-`

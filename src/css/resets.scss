@@ -12,17 +12,16 @@ Resets
   box-sizing: border-box;
 }
 
-ol, ul {
-	list-style-type: none;
+ol,
+ul {
+  list-style-type: none;
 }
-
 a {
-    text-decoration: none;
-  }
+  text-decoration: none;
+}
 button:hover,
 button:active,
 button:focus,
-button:target{
-outline:none;
+button:target {
+  outline: none;
 }
-

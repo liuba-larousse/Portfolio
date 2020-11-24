@@ -1,0 +1,65 @@
+@import "~/css/global-variables.module.scss";
+
+/*
+=============== 
+layout
+===============
+*/
+.grid_container {
+  display: grid;
+  overflow: hidden;
+  grid-template-columns: 100%;
+  grid-template-rows: minmax(10%, fit-content) minmax(fit-content, auto) 10%;
+  grid-template-areas:
+    "navbar"
+    "main"
+    "footer";
+}
+
+.navbar {
+  grid-area: navbar;
+}
+
+.footer {
+  grid-area: footer;
+}
+
+.main {
+  grid-area: main;
+  display: grid;
+  grid-template-columns: 0 100%;
+  grid-template-areas: "sidebar children ";
+}
+.children {
+  grid-area: children;
+}
+
+.sidebar {
+  grid-area: sidebar;
+  position: absolute;
+  height: 100vh;
+  width: 50vw;
+}
+
+//   //Backgrop
+// .backdrop_blur{
+//   width: 50vw;
+//   z-index: 9;
+//   filter: blur(10px) grayscale(75%) brightness(85%) opacity(50%) ;
+
+// }
+
+.fadeIn {
+  animation-name: fadeIn;
+  animation-duration: 0.5s;
+  animation-fill-mode: both;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}

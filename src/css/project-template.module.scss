@@ -1,28 +1,28 @@
-@import './resets' ,'./global-variables';
- 
- /*
+@import "./resets", "~/css/global-variables.module.scss";
+
+/*
 =============== 
 Project Template
 ===============
 */
 
-.container{
-    display: flex;
-    flex-direction: column;
-    margin: 0 auto;
-    width: 80%;
-    padding-bottom: $marginMd;
-  
-  }
-.container,.container>*{
-margin-top: $marginLg;
-margin-bottom: $marginLg;
-text-align: justify;
+.container {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  width: 80%;
+  padding-bottom: $marginMd;
 }
-  
- // Small devices (landscape phones, 576px and up)
-@media (min-width: 36em) { 
-    .container{
-       width: 60%;
-      } 
- }
+.container,
+.container > * {
+  margin-top: $marginLg;
+  margin-bottom: $marginLg;
+  text-align: justify;
+}
+
+// Small devices (landscape phones, 576px and up)
+@media (min-width: 36em) {
+  .container {
+    width: 60%;
+  }
+}

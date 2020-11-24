@@ -1,0 +1,30 @@
+@import "~/css/global-variables.module.scss";
+
+/*
+=============== 
+Footer
+===============
+*/
+
+footer {
+  width: 100%;
+  height: 15rem;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: $secondary-font;
+  font-size: $font-p;
+  a {
+    color: $clr-text-primarly;
+  }
+}
+
+.flaticons {
+  font-size: $font-small;
+}
+
+.icon {
+  color: $clr-primary;
+}

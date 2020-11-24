@@ -1,0 +1,118 @@
+@import "~/css/global-variables.module.scss";
+
+//HERO
+
+//BACKGROUND
+.bkg {
+  width: 100%;
+  height: 80vh;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.grid {
+  transform: translateY(10%);
+  width: 90%;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 50% 50%;
+  grid-template-areas: "text .";
+  h1 {
+    font-size: 5.5rem;
+    text-transform: uppercase;
+  }
+}
+
+.text {
+  transform: translateY(5vh);
+  grid-area: text;
+  display: flex;
+  flex-direction: column;
+  text-align: flex-start;
+  font-size: $font-h2;
+  font-family: $secondary-font;
+  font-weight: 200;
+}
+
+.btn_contact {
+  margin: 2rem 0;
+}
+
+//TYPEWRITING ANIMATION
+/* Animation */
+
+.animTypeWrap {
+  width: min-content;
+}
+.animType {
+  display: flex;
+  width: min-content;
+  overflow: hidden;
+  border-right: 2px solid transparent;
+  white-space: nowrap;
+  margin: 0 auto;
+  animation: typewriter 2s steps(12, end) 1s 1 normal both,
+    blinkTextCursor 500ms steps(12, end) 8 normal;
+}
+@keyframes typewriter {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+@keyframes blinkTextCursor {
+  from {
+    border-right-color: rgba(255, 255, 255, 0.75);
+  }
+  to {
+    border-right-color: transparent;
+  }
+}
+.animFlash {
+  animation-name: flash-text;
+  animation-duration: 10s;
+  animation-fill-mode: both;
+  animation-delay: 1s;
+  animation-iteration-count: infinite;
+}
+@keyframes flash-text {
+  3%,
+  100% {
+    opacity: 0;
+  }
+  0%,
+  4% {
+    opacity: 0;
+  }
+  1%,
+  5% {
+    opacity: 1;
+  }
+}
+
+// Small devices (tablets, 768px and up)
+@media (min-width: 36em) {
+  .bkg {
+    height: 90vh;
+  }
+  .text {
+    transform: translateY(5vh);
+  }
+  .links {
+    width: 80%;
+  }
+}
+
+// Medium devices (tablets, 768px and up)
+@media (min-width: 48em) {
+  .grid {
+    grid-template-columns: 40% 60%;
+
+    h1 {
+      font-size: 6rem;
+    }
+  }
+}

@@ -1,8 +1,0 @@
-{  
-    "provider": "cloudinary",  
-    "providerOptions": {
-      "cloud_name": "liubalarousse",
-      "api_key": "759413771292545",
-      "api_secret": "vWs5aIsuA2m8u0X1W6GWFMhAo1Q"  
-    }
-  }
