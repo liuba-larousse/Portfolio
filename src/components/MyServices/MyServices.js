@@ -22,14 +22,14 @@ export default function MyServises() {
     console.log(images)
     return (
         <section id="services" className={s.section}>
-            <h1
+            <h2
                 data-sal="slide-up"
                 data-sal-duration="500"
                 data-sal-delay="250"
                 data-sal-easing="ease-in"
             >
                 Services
-            </h1>
+            </h2>
             <div className={s.flex}>
                 <ServiceCard
                     delay="0"

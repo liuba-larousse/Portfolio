@@ -5,7 +5,7 @@ import { useStaticQuery, graphql } from 'gatsby'
 import { Link } from 'gatsby'
 import { InView } from 'react-intersection-observer'
 import { projects } from './projects-data'
-import { AiOutlineLink } from 'react-icons/ai'
+
 import { FaGithubSquare, FaStaylinked } from 'react-icons/fa'
 
 export default function Projects() {
@@ -68,14 +68,14 @@ export default function Projects() {
 
     return (
         <section id="projects" className={s.section}>
-            <h1
+            <h2
                 data-sal="slide-up"
                 data-sal-duration="500"
                 data-sal-delay="250"
                 data-sal-easing="ease-in"
             >
                 Projects
-            </h1>
+            </h2>
 
             <div
                 className={s.project_list}

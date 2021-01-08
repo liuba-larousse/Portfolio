@@ -9,7 +9,7 @@ import { graphql, useStaticQuery } from 'gatsby'
 export default function Hero() {
     const { allFile } = useStaticQuery(graphql`
         {
-            allFile(filter: { relativePath: { eq: "heroBWfade.png" } }) {
+            allFile(filter: { relativePath: { eq: "heroBWfade2.png" } }) {
                 nodes {
                     childImageSharp {
                         fluid {
@@ -56,7 +56,9 @@ export default function Hero() {
                                         data-sal-duration="500"
                                         data-sal-delay="1000"
                                     >
-                                        <a href={link.link}>{link.icon}</a>
+                                        <Link href={link.link}>
+                                            {link.icon}
+                                        </Link>
                                     </li>
                                 )
                             })}
