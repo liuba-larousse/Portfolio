@@ -18,7 +18,7 @@ export default function Footer() {
                     <GrGatsbyjs className="pulse-delay" />
                 </span>{' '}
             </span>
-            <span> © Liuba LaRousse {year}</span>
+            <span> © Liuba Kapitulskaya {year}</span>
             <div className={s.flaticons}>
                 Icons made by{' '}
                 <a
