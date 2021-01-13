@@ -38,7 +38,7 @@ export default function Hero() {
                             I will code your dreams into{' '}
                             <span className={s.animFlash}>reality</span>
                         </span>
-                        <Link href="mailto:liuba.larousse@gmail.com">
+                        <a href="mailto:liuba.larousse@gmail.com">
                             <span className={component.flash_wait}>
                                 <button
                                     className={`${component.button} ${s.btn_contact}`}
@@ -46,7 +46,7 @@ export default function Hero() {
                                     Contact me
                                 </button>
                             </span>
-                        </Link>
+                        </a>
                         <ul className={`${component.links} ${s.links}`}>
                             {links.map(link => {
                                 return (

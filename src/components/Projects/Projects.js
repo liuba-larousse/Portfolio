@@ -52,10 +52,10 @@ export default function Projects() {
                         <div className={s.title}>
                             <span>{project.field}</span>
                             <span className={s.links}>
-                                <Link to={project.git} class={s.icon}>
+                                <Link to={project.git} className={s.icon}>
                                     <FaGithubSquare />
                                 </Link>
-                                <Link to={project.url} class={s.icon}>
+                                <Link to={project.url} className={s.icon}>
                                     <FaStaylinked />
                                 </Link>
                             </span>

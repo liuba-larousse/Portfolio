@@ -1,0 +1,51 @@
+@import '~/css/global-variables.module.scss';
+
+.section {
+    padding: 10rem 0;
+    background-color: $clr-bkg-darker;
+    // background-image: $bkg-pattern-glamour;
+    h2 {
+        text-align: center;
+        font-family: $main-font;
+        font-size: $font-h2;
+        text-transform: uppercase;
+        margin-bottom: 8rem;
+    }
+}
+
+.box {
+    width: 15rem;
+    height: 15rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: $radius;
+    border: 1px solid $clr-primary;
+    margin: 1rem;
+}
+
+.title {
+    font-size: $font-h3;
+    font-family: $secondary-font;
+    text-transform: uppercase;
+    font-weight: 100;
+}
+
+.icon {
+    font-size: 4rem;
+    color: $clr-primary;
+}
+
+.flexlist {
+    width: 85%;
+    height: fit-content;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+
+@media (min-width: 48em) {
+}
