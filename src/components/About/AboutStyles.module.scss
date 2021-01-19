@@ -8,8 +8,8 @@ Contact form
 
 $border-circle: 0.5rem;
 $color: $clr-primary;
-$width: 35rem;
-$height: $width * 2.1;
+$width: 30rem;
+$height: $width * 1.8;
 $scale: 1.8;
 
 .section {
@@ -108,6 +108,8 @@ $scale: 1.8;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    padding-top: 30rem;
+    overflow: auto;
     p {
         margin: 2rem;
         font-size: $font-h3;
@@ -116,6 +118,10 @@ $scale: 1.8;
 }
 
 //button
+@media (min-width: 20em) {
+    $width: 35rem;
+    $height: $width / 1.5;
+}
 
 // // Medium devices (tablets, 768px and up)
 @media (min-width: 48em) {
@@ -134,7 +140,7 @@ $scale: 1.8;
 
     .text {
         grid-area: text;
-
+        padding-top: 0rem;
         p {
             text-align: center;
         }
