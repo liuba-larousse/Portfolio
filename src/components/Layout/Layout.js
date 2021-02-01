@@ -59,6 +59,8 @@ function useOnClickOutside(ref, handler) {
             // Do nothing if clicking ref's element or descendent elements
             if (!ref.current || ref.current.contains(event.target)) {
                 return
+            } else if (window.innerWidth < 800) {
+                return
             }
 
             handler(event)

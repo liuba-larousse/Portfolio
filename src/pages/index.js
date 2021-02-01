@@ -5,6 +5,7 @@ import MyServices from '~/components/MyServices/MyServices'
 import Projects from '~/components/Projects/Projects'
 import Contact from '~/components/Contact/Contact'
 import About from '~/components/About/About'
+import SEO from '~/components/SEO/SEO'
 
 import Skills from '~/components/Skills/Skills'
 
@@ -13,6 +14,7 @@ import '../css/main.scss'
 export default function Home() {
     return (
         <Layout>
+            <SEO title="Front-end Developer. HTML, CSS, JS, React" />
             <Hero />
             <div className="parallax full_height">
                 <About />
