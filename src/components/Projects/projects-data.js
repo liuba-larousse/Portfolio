@@ -16,6 +16,14 @@ const projects = [
         url: 'http://www.sovemykt.me/',
         git: 'https://github.com/liuba-larousse/shopify-sovemykt',
     },
+    {
+        id: 2,
+        image: 'project-3.png',
+        field: 'Web-design agency',
+        name: 'Finify',
+        url: 'https://gatsby-finify-agency.netlify.app',
+        git: 'https://github.com/liuba-larousse/gatsby-finify',
+    },
 ]
 
 export { projects }
