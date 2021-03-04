@@ -3,8 +3,6 @@ import { skills } from './skillsdata.js'
 import s from './MySkillsStyles.module.scss'
 
 export default function MyServises() {
-    console.log(skills)
-
     return (
         <section id="skills" className={s.section}>
             <h2

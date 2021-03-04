@@ -17,7 +17,13 @@ export default function Skills() {
             </h2>
             <div className={s.flexlist}>
                 {skills.map(skill => (
-                    <div className={s.box}>
+                    <div
+                        className={s.box}
+                        data-sal="slide-up"
+                        data-sal-duration="500"
+                        data-sal-delay="500"
+                        data-sal-easing="ease-in"
+                    >
                         <span className={s.icon}>{skill.icon}</span>
                         <span className={s.title}>{skill.name}</span>
                     </div>

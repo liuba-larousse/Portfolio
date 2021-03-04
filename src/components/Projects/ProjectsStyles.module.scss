@@ -19,10 +19,26 @@
 }
 .img {
     z-index: 3;
+    position: relative;
+}
+
+.img_each {
+    width: 100%;
+    min-height: 45rem;
+    height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    cursor: pointer;
+    &:hover,
+    &:focus,
+    &:active {
+        background-position: top;
+    }
 }
 
 .title_box {
-    height: 30rem;
+    min-height: 45rem;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -44,8 +60,8 @@
 
 .title {
     background: $clr-bkg-darker;
-    width: 25rem;
-    width: 25rem;
+    width: 22rem;
+    height: 22rem;
     border: 1px solid $clr-primary;
     border-radius: $radius;
     padding: 1.6rem;

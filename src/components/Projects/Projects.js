@@ -5,7 +5,7 @@ import { useStaticQuery, graphql } from 'gatsby'
 import { Link } from 'gatsby'
 import { InView } from 'react-intersection-observer'
 import { projects } from './projects-data'
-
+import BackgroundImage from 'gatsby-background-image'
 import { FaGithubSquare, FaStaylinked } from 'react-icons/fa'
 
 export default function Projects() {
@@ -30,10 +30,20 @@ export default function Projects() {
     console.log(projects)
 
     const projectList = projects.slice(0, 3).map((project, index) => (
-        <div className={s.project_list_item} key={index}>
+        <div
+            className={s.project_list_item}
+            key={index}
+            data-sal="slide-up"
+            data-sal-duration="500"
+            data-sal-delay="250"
+            data-sal-easing="ease-in"
+        >
             <div className={s.img}>
-                <div className={s.hide}></div>
-                <Img fluid={images[project.id].childImageSharp.fluid} />
+                <div className={s.overlay}></div>
+                <BackgroundImage
+                    className={s.img_each}
+                    fluid={images[project.id].childImageSharp.fluid}
+                />
             </div>
 
             <InView threshold={0.9}>
@@ -77,15 +87,7 @@ export default function Projects() {
                 Projects
             </h2>
 
-            <div
-                className={s.project_list}
-                data-sal="slide-up"
-                data-sal-duration="500"
-                data-sal-delay="250"
-                data-sal-easing="ease-in"
-            >
-                {projectList}
-            </div>
+            <div className={s.project_list}>{projectList}</div>
         </section>
     )
 }

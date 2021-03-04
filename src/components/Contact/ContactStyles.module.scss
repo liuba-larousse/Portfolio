@@ -118,7 +118,8 @@ $scale: 1.8;
 .links {
     flex-direction: row;
     justify-content: space-between;
-    width: 85%;
+    width: 80%;
+    max-width: 30rem;
     margin: 2rem auto;
 }
 
