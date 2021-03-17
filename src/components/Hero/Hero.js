@@ -2,7 +2,7 @@ import React from 'react'
 import { social } from '../socialMedia'
 import s from './HeroStyles.module.scss'
 import component from '~/css/components.module.scss'
-import { Link } from 'gatsby'
+
 import BackgroundImage from 'gatsby-background-image'
 import { graphql, useStaticQuery } from 'gatsby'
 
@@ -34,10 +34,7 @@ export default function Hero() {
                         </span>
                         <h1>Web Developer</h1>
 
-                        <span>
-                            I will code your dreams into{' '}
-                            <span className={s.animFlash}>reality</span>
-                        </span>
+                        <span>I will code your dreams into reality</span>
                         <a href="mailto:liuba.larousse@gmail.com">
                             <span className={component.flash_wait}>
                                 <button
@@ -56,9 +53,7 @@ export default function Hero() {
                                         data-sal-duration="500"
                                         data-sal-delay="1000"
                                     >
-                                        <Link href={link.link}>
-                                            {link.icon}
-                                        </Link>
+                                        <a href={link.link}>{link.icon}</a>
                                     </li>
                                 )
                             })}

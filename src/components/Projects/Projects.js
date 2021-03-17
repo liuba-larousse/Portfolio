@@ -1,17 +1,22 @@
 import React from 'react'
 import s from './ProjectsStyles.module.scss'
-import Img from 'gatsby-image'
 import { useStaticQuery, graphql } from 'gatsby'
-import { Link } from 'gatsby'
+// import { Link } from 'gatsby'
 import { InView } from 'react-intersection-observer'
 import { projects } from './projects-data'
 import BackgroundImage from 'gatsby-background-image'
 import { FaGithubSquare, FaStaylinked } from 'react-icons/fa'
 
 export default function Projects() {
-    const { allFile } = useStaticQuery(graphql`
+    const { allFile, allMarkdownRemark } = useStaticQuery(graphql`
         {
-            allFile(filter: { relativeDirectory: { eq: "project_images" } }) {
+            allFile(
+                sort: {
+                    fields: childrenImageSharp___fluid___originalName
+                    order: ASC
+                }
+                filter: { relativeDirectory: { eq: "project_images" } }
+            ) {
                 nodes {
                     relativeDirectory
                     childImageSharp {
@@ -22,12 +27,24 @@ export default function Projects() {
                     }
                 }
             }
+            allMarkdownRemark(sort: { fields: frontmatter___id, order: ASC }) {
+                totalCount
+                edges {
+                    node {
+                        id
+                        frontmatter {
+                            title
+                            id
+                            slug
+                        }
+                    }
+                }
+            }
         }
     `)
 
     const images = allFile.nodes
-
-    console.log(projects)
+    // const markdown = allMarkdownRemark.edges
 
     const projectList = projects.slice(0, 3).map((project, index) => (
         <div
@@ -39,7 +56,11 @@ export default function Projects() {
             data-sal-easing="ease-in"
         >
             <div className={s.img}>
-                <div className={s.overlay}></div>
+                <a
+                    className={s.overlay}
+                    href={project.url}
+                    // to={markdown[project.id].node.frontmatter.slug}
+                />
                 <BackgroundImage
                     className={s.img_each}
                     fluid={images[project.id].childImageSharp.fluid}
@@ -62,12 +83,12 @@ export default function Projects() {
                         <div className={s.title}>
                             <span>{project.field}</span>
                             <span className={s.links}>
-                                <Link to={project.git} className={s.icon}>
+                                <a href={project.git} className={s.icon}>
                                     <FaGithubSquare />
-                                </Link>
-                                <Link to={project.url} className={s.icon}>
+                                </a>
+                                <a href={project.url} className={s.icon}>
                                     <FaStaylinked />
-                                </Link>
+                                </a>
                             </span>
                         </div>
                     </div>

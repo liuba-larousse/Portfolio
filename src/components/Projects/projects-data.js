@@ -1,7 +1,7 @@
 const projects = [
     {
         id: 0,
-        image: 'project-2.png',
+        image: 'project_01.png',
         field: 'Music Production Studio',
         name: 'Rich Boy Mafia',
         url: 'https://www.richboymafia.com/',
@@ -10,7 +10,7 @@ const projects = [
     },
     {
         id: 1,
-        image: 'project-1.png',
+        image: 'project_02.png',
         field: 'One-Product Ecommerce',
         name: 'Sovemykt',
         url: 'http://www.sovemykt.me/',
@@ -18,10 +18,10 @@ const projects = [
     },
     {
         id: 2,
-        image: 'project-3.png',
+        image: 'project_03.png',
         field: 'Web-design agency',
         name: 'Finify',
-        url: 'https://gatsby-finify-agency.netlify.app',
+        url: 'https://www.finify.expert/',
         git: 'https://github.com/liuba-larousse/gatsby-finify',
     },
 ]

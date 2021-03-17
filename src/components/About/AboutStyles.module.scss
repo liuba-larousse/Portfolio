@@ -108,13 +108,29 @@ $scale: 1.8;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding-top: 30rem;
+    padding-top: 10rem;
     overflow: auto;
     p {
         margin: 2rem;
-        font-size: $font-h3;
+        font-size: $font-h4;
         text-align: center;
     }
+}
+/* width */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: $clr-bkg-darker;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: $clr-primary;
+    width: 8px;
+    border-radius: $radius;
 }
 
 //button
@@ -143,6 +159,7 @@ $scale: 1.8;
         padding-top: 0rem;
         p {
             text-align: center;
+            font-size: $font-h3;
         }
     }
 }

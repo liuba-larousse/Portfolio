@@ -1,6 +1,5 @@
 import React from 'react'
 import { FaHtml5, FaCss3Alt, FaReact, FaSass, FaShopify } from 'react-icons/fa'
-import { DiJavascript } from 'react-icons/di'
 import { GrGraphQl, GrGatsbyjs } from 'react-icons/gr'
 import { SiNetlify, SiJavascript } from 'react-icons/si'
 

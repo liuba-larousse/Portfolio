@@ -42,6 +42,7 @@ module.exports = {
                 '~': path.join(__dirname, 'src/'),
             },
         },
+
         {
             resolve: `gatsby-source-filesystem`,
             options: {
@@ -49,5 +50,13 @@ module.exports = {
                 path: `${__dirname}/static/images`,
             },
         },
+        {
+            resolve: `gatsby-source-filesystem`,
+            options: {
+                name: `markdown-pages`,
+                path: `${__dirname}/src/markdown-pages`,
+            },
+        },
+        `gatsby-transformer-remark`,
     ],
 }
