@@ -17,21 +17,7 @@ export default function Sidebar({ closeSidebar }) {
                             <h2>home</h2>
                         </Link>
                     </li>
-                    {/* <li>
-          <Link className={s.link} to="/about">
-            {" "}
-            <h2>about</h2>
-          </Link>
-        </li> */}
-                    <li>
-                        <button
-                            className={s.link}
-                            onClick={() => scrollTo('#projects')}
-                        >
-                            {' '}
-                            <h2>projects </h2>
-                        </button>
-                    </li>
+
                     <li>
                         <button
                             className={s.link}
@@ -39,6 +25,25 @@ export default function Sidebar({ closeSidebar }) {
                         >
                             {' '}
                             <h2>skills </h2>
+                        </button>
+                    </li>
+                    <li>
+                        <button
+                            className={s.link}
+                            onClick={() => scrollTo('#about')}
+                        >
+                            {' '}
+                            <h2>about me </h2>
+                        </button>
+                    </li>
+
+                    <li>
+                        <button
+                            className={s.link}
+                            onClick={() => scrollTo('#projects')}
+                        >
+                            {' '}
+                            <h2>projects </h2>
                         </button>
                     </li>
                     <li>

@@ -3,7 +3,7 @@ import s from './AboutStyles.module.scss'
 
 export default function About() {
     return (
-        <section className={s.section}>
+        <section className={s.section} id="about">
             <div
                 className={`${s.container} ${s.front}`}
                 data-sal="fade"
