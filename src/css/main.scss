@@ -1,0 +1,49 @@
+@import './resets', '~/css/global-variables.module.scss';
+
+body,
+html {
+    height: 100%;
+}
+
+.parallax {
+    /* The image used */
+    background: $bkg-pattern-glamour;
+
+    /* Full height */
+    height: 30vh;
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+}
+
+.parallax.full_height {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    z-index: 1;
+}
+
+.not_found {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.link_home {
+    width: 25rem;
+    text-align: center;
+    color: $clr-primary;
+    border-bottom: $border solid $clr-primary;
+    font-family: $secondary-font;
+    text-transform: uppercase;
+    font-size: $font-h2;
+    transition: all 0.5s ease-in-out;
+}
+
+.link_home:hover,
+.link_home:active {
+    width: 30rem;
+}

@@ -1,0 +1,57 @@
+@import "~/css/global-variables.module.scss";
+
+.sidebar {
+  padding-top: 15%;
+  width: 50%;
+  height: 100vh;
+  position: fixed;
+  z-index: 20;
+  padding-left: 2rem;
+  backdrop-filter: blur(10px);
+}
+
+.links {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  text-align: left;
+}
+
+.link {
+  color: $clr-primary;
+  display: block;
+  width: 35vw;
+  border-bottom: $border solid $clr-primary;
+  margin-top: 2.5rem;
+  background: transparent;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  text-align: left;
+  transition: all 0.5s ease-in-out;
+  h2 {
+    text-transform: uppercase;
+  }
+}
+.link:hover,
+.link:active {
+  width: 40vw;
+  transition: all 0.5s ease-in-out;
+}
+
+@media (min-width: 48em) {
+  .sidebar {
+    padding-top: 10%;
+  }
+
+  .links {
+    width: 30%;
+  }
+  .link {
+    width: 30vw;
+  }
+  .link:hover,
+  .link:active {
+    width: 35vw;
+  }
+}
