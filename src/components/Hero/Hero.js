@@ -29,12 +29,16 @@ export default function Hero() {
             <BackgroundImage className={s.bkg} fluid={fluid}>
                 <section className={s.grid}>
                     <div className={s.text}>
-                        <span className={s.animTypeWrap}>
+                        <h1 className={s.animTypeWrap}>
                             <span className={s.animType}>Hi, I`m Liuba</span>
-                        </span>
-                        <h1>Web Developer</h1>
+                        </h1>
+                        <h1>
+                            {' '}
+                            Front-end{' '}
+                            <span className={s.titleHighlight}>Developer</span>
+                        </h1>
 
-                        <span>I will code your dreams into reality</span>
+                        {/* <span>I will code your dreams into reality</span> */}
                         <a href="mailto:liuba.larousse@gmail.com">
                             <span className={component.flash_wait}>
                                 <button

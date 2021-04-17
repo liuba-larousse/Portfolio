@@ -1,11 +1,11 @@
 import React from 'react'
 import s from './ProjectsStyles.module.scss'
 import { useStaticQuery, graphql } from 'gatsby'
-// import { Link } from 'gatsby'
+import { Link } from 'gatsby'
 import { InView } from 'react-intersection-observer'
 import { projects } from './projects-data'
 import BackgroundImage from 'gatsby-background-image'
-import { FaGithubSquare, FaStaylinked } from 'react-icons/fa'
+import { FaGithubSquare, FaStaylinked, FaChevronRight } from 'react-icons/fa'
 
 export default function Projects() {
     const { allFile, allMarkdownRemark } = useStaticQuery(graphql`
@@ -44,7 +44,7 @@ export default function Projects() {
     `)
 
     const images = allFile.nodes
-    // const markdown = allMarkdownRemark.edges
+    const markdown = allMarkdownRemark.edges
 
     const projectList = projects.slice(0, 3).map((project, index) => (
         <div
@@ -56,10 +56,10 @@ export default function Projects() {
             data-sal-easing="ease-in"
         >
             <div className={s.img}>
-                <a
+                <Link
                     className={s.overlay}
-                    href={project.url}
-                    // to={markdown[project.id].node.frontmatter.slug}
+                    // href={project.url}
+                    to={markdown[project.id].node.frontmatter.slug}
                 />
                 <BackgroundImage
                     className={s.img_each}
@@ -80,17 +80,25 @@ export default function Projects() {
                                 inView ? `${s.vl} ${s.vlAnimate}` : `${s.vl} `
                             }
                         ></div>
-                        <div className={s.title}>
-                            <span>{project.field}</span>
-                            <span className={s.links}>
+                        <Link
+                            className={s.title}
+                            to={markdown[project.id].node.frontmatter.slug}
+                        >
+                            <span className={s.projectName}>
+                                {project.field}
+                            </span>
+                            <span className={s.projectLink}>
+                                view project <FaChevronRight />
+                            </span>
+                            {/* <span className={s.links}>
                                 <a href={project.git} className={s.icon}>
                                     <FaGithubSquare />
                                 </a>
                                 <a href={project.url} className={s.icon}>
                                     <FaStaylinked />
                                 </a>
-                            </span>
-                        </div>
+                            </span> */}
+                        </Link>
                     </div>
                 )}
             </InView>
