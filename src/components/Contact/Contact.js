@@ -33,7 +33,7 @@ export default function contactPage() {
                             you with your project.
                         </p>
                         <a
-                            href="mailto:liuba.larousse@gmail.com"
+                            href="mailto:liubovkapitulskaya@gmail.com"
                             className={`${component.button} ${s.btn_contact}`}
                         >
                             Let`s connect!

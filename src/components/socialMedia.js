@@ -26,12 +26,12 @@ const social = [
         icon: <FaBehanceSquare />,
         link: 'https://www.behance.net/liubovkapitul',
     },
-    {
-        id: 3,
-        name: 'instagram',
-        icon: <FaInstagramSquare />,
-        link: 'https://www.instagram.com/liuba_larousse/?hl=en',
-    },
+    // {
+    //     id: 3,
+    //     name: 'instagram',
+    //     icon: <FaInstagramSquare />,
+    //     link: 'https://www.instagram.com/liuba_larousse/?hl=en',
+    // },
 ]
 
 export { social }

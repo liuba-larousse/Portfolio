@@ -28,13 +28,13 @@ export default function Home() {
             <SEO title="Front-end Developer. HTML, CSS, JS, React" />
             <Hero />
             <div className="parallax"></div>
-            <Skills />
+            <Projects />
             <div className="parallax full_height">
                 <About />
             </div>
             {/* <Skills />
             <div className="parallax"></div> */}
-            <Projects />
+            <Skills />
             <div className="parallax full_height">
                 <Contact />
             </div>
