@@ -15,14 +15,12 @@ git: 'https://github.com/liuba-larousse/Challenge'
 
 ## Description
 
-In this project I have build a few vey basic webapps which demonstrate the functionality of HTML, CSS and Vanilla JS.
+In this project I have build 20 vey basic webapps which demonstrate the functionality of HTML, CSS and Vanilla JS.
 
-<!-- ## Implemented solutions
+## Learnings
 
-• Used Gatsby for front-end to reduce page loading time and get more organic traffic due to Google rewarding high-performance websites
+• Javascript related learnings include: variables, Operators, Functions, Events, Objects, Error handling form Validations, HTML DOM, Animations, Debugging
 
-• Integrated Shopify JavaScript Buy SDK to build cart full functionality
+• Javascript related learnings include: Cascading, Inheritance & Specificity, !important Declarations, Flexbox & Grid , Media Queries, Animations
 
 • Used GraphQL to allow a merchant to fetch data, product configuration, and for the user to checkout
-
-• Connected front-end to Google Sheets API for website content, which merchant can manage independently (due to the content being in foreign language) -->
