@@ -6,6 +6,7 @@ import {
     FaBehanceSquare,
     FaLinkedin,
 } from 'react-icons/fa'
+import { FiCodesandbox } from 'react-icons/fi'
 
 const social = [
     {
@@ -20,11 +21,17 @@ const social = [
         icon: <FaLinkedin />,
         link: 'https://www.linkedin.com/in/liubov-kapitulskaya-4009796b/',
     },
+    // {
+    //     id: 2,
+    //     name: 'bahance',
+    //     icon: <FaBehanceSquare />,
+    //     link: 'https://www.behance.net/liubovkapitul',
+    // },
     {
-        id: 2,
+        id: 3,
         name: 'bahance',
-        icon: <FaBehanceSquare />,
-        link: 'https://www.behance.net/liubovkapitul',
+        icon: <FiCodesandbox />,
+        link: 'https://codesandbox.io/u/liuba-larousse',
     },
     // {
     //     id: 3,
