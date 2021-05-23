@@ -1,7 +1,7 @@
 const projects = [
     {
         id: 0,
-        image: 'project_01.png',
+        image: 'project_1.png',
         field: 'Learning CSS/HTML/JS',
         name: 'Learning project',
         url: 'https://learning-css-html-js.netlify.app/',
@@ -9,7 +9,7 @@ const projects = [
     },
     {
         id: 1,
-        image: 'project_02.png',
+        image: 'project_2.png',
         field: 'Music Production Studio Website',
         name: 'Rich Boy Mafia',
         url: 'https://www.richboymafia.com/',
@@ -17,7 +17,7 @@ const projects = [
     },
     {
         id: 2,
-        image: 'project_03.png',
+        image: 'project_3.png',
         field: 'One-Product Ecommerce Website',
         name: 'Sovemykt',
         url: 'http://www.sovemykt.me/',
@@ -25,7 +25,7 @@ const projects = [
     },
     {
         id: 3,
-        image: 'project_04.png',
+        image: 'project_4.png',
         field: 'Web-design agency Website',
         name: 'Finify',
         url: 'https://www.finify.expert/',

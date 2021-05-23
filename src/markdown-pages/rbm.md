@@ -2,7 +2,7 @@
 slug: '/projects/rbm'
 id: '0'
 title: 'RichBoyMafia - Music Production Studio Website'
-image: 'project_01.png'
+image: 'project_2.png'
 url: 'https://www.richboymafia.com/'
 git: 'https://github.com/liuba-larousse/gatsby_rbm'
 ---

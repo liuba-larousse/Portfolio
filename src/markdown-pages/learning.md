@@ -2,7 +2,7 @@
 slug: '/projects/learning'
 id: '0'
 title: 'Learning CSS/HTML/JS'
-image: 'project_01.png'
+image: 'project_1.png'
 url: 'https://learning-css-html-js.netlify.app/'
 git: 'https://github.com/liuba-larousse/Challenge'
 ---

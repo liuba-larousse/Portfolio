@@ -2,7 +2,7 @@
 slug: '/projects/sovemykt'
 id: '1'
 title: 'Sovemykt - One-Product Ecommerce Website'
-image: 'project_02.png'
+image: 'project_3.png'
 url: 'http://www.sovemykt.me/'
 git: 'https://github.com/liuba-larousse/shopify-sovemykt'
 ---
