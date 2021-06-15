@@ -19,7 +19,7 @@ const social = [
         id: 1,
         name: 'linkedin',
         icon: <FaLinkedin />,
-        link: 'https://www.linkedin.com/in/liubov-kapitulskaya-4009796b/',
+        link: 'https://www.linkedin.com/in/liubovkapitulskaya/',
     },
     // {
     //     id: 2,
