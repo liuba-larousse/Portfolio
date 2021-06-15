@@ -5,8 +5,7 @@
 //BACKGROUND
 .bkg {
     width: 100%;
-    height: 80vh;
-    min-height: 70rem;
+    height: 100vh;
     right: 0;
     height: fit-content;
     background-size: cover;
@@ -15,28 +14,58 @@
     background-color: $clr-bkg-darker;
 }
 
-.grid {
-    transform: translateY(10%);
-    width: 80%;
+// .grid {
+//     transform: translateY(10%);
+//     width: 80%;
+//     margin: 0 auto;
+//     display: grid;
+//     grid-template-columns: 50% 50%;
+//     grid-template-areas: 'text .';
+//     h1 {
+//         font-size: 5.5rem;
+//         text-transform: uppercase;
+//     }
+// }
+
+.section {
+    position: relative;
     margin: 0 auto;
-    display: grid;
-    grid-template-columns: 50% 50%;
-    grid-template-areas: 'text .';
+
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     h1 {
         font-size: 5.5rem;
         text-transform: uppercase;
     }
 }
 
+.overlay {
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    z-index: -1;
+    background: radial-gradient(
+        circle,
+        rgba(39, 81, 88, 0.6) 0%,
+        rgba(16, 44, 52, 0.6) 75%,
+        rgba(2, 24, 30, 0.6) 100%
+    );
+}
+
 .text {
-    transform: translateY(10%);
-    grid-area: text;
+    width: 80%;
     display: flex;
     flex-direction: column;
-    text-align: flex-start;
+    align-items: center;
+    justify-content: center;
     font-size: $font-h2;
     font-family: $secondary-font;
     font-weight: 200;
+    h1 {
+        text-align: center;
+    }
 }
 
 .btn_contact {
@@ -44,8 +73,9 @@
 }
 
 .titleHighlight {
-    color: $clr-cirle;
+    color: #f98440;
 }
+
 //TYPEWRITING ANIMATION
 /* Animation */
 
@@ -102,12 +132,6 @@
 
 // Small devices (tablets, 768px and up)
 @media (min-width: 36em) {
-    .bkg {
-        height: 90vh;
-    }
-    .text {
-        transform: translateY(25%);
-    }
     .links {
         width: 80%;
     }
@@ -115,11 +139,7 @@
 
 // Medium devices (tablets, 768px and up)
 @media (min-width: 48em) {
-    .grid {
-        grid-template-columns: 40% 60%;
-
-        h1 {
-            font-size: 6rem;
-        }
+    h1 {
+        font-size: 6rem;
     }
 }

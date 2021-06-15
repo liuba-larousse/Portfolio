@@ -8,6 +8,15 @@ export default function contactPage() {
     const links = [...social]
     return (
         <section id="contact" className={s.section}>
+            <h2
+                data-sal="slide-up"
+                data-sal-duration="500"
+                data-sal-delay="250"
+                data-sal-easing="ease-in"
+            >
+                Get in touch
+            </h2>
+
             <div
                 className={`${s.container} ${s.front}`}
                 data-sal="fade"
@@ -56,7 +65,7 @@ export default function contactPage() {
                     </ul>
                 </div>
             </div>
-            <div
+            {/* <div
                 className={`${s.container} ${s.back}`}
                 data-sal="fade"
                 data-sal-duration="500"
@@ -69,7 +78,7 @@ export default function contactPage() {
                     <div className={s.c3}></div>
                 </div>
                 <div className={s.bottom}></div>
-            </div>
+            </div> */}
         </section>
     )
 }

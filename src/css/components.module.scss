@@ -19,7 +19,7 @@
 .button:hover,
 .button:focus,
 .button:active {
-    background-color: $clr-text-primarly;
+    background-color: #1f454c;
     //    color:$clr-primary;
     // transform: scale(1.1);
 }
@@ -106,10 +106,10 @@
         justify-content: space-between;
     }
 }
-@media (min-width: 48em) {
-    .links {
-        a {
-            font-size: 3.5rem;
-        }
-    }
-}
+// @media (min-width: 48em) {
+//     .links {
+//         a {
+//             font-size: 3.5rem;
+//         }
+//     }
+// }

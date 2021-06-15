@@ -9,7 +9,7 @@ import { graphql, useStaticQuery } from 'gatsby'
 export default function Hero() {
     const { allFile } = useStaticQuery(graphql`
         {
-            allFile(filter: { relativePath: { eq: "heroFilter.png" } }) {
+            allFile(filter: { relativePath: { eq: "pattern2.jpg" } }) {
                 nodes {
                     childImageSharp {
                         fluid {
@@ -24,10 +24,11 @@ export default function Hero() {
     const { fluid } = allFile.nodes[0].childImageSharp
 
     const links = [...social]
+
     return (
         <>
             <BackgroundImage className={s.bkg} fluid={fluid}>
-                <section className={s.grid}>
+                <section className={s.section}>
                     <div className={s.text}>
                         <h1 className={s.animTypeWrap}>
                             <span className={s.animType}>Hi, I`m Liuba</span>
@@ -63,6 +64,7 @@ export default function Hero() {
                             })}
                         </ul>
                     </div>
+                    <div className={s.overlay}></div>
                 </section>
             </BackgroundImage>
         </>

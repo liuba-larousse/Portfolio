@@ -1,7 +1,7 @@
 @import '~/css/global-variables.module.scss';
 
 .section {
-    padding: 10rem 0;
+    padding: $marginXlg 0;
     background-color: $clr-bkg-darker;
     // background-image: $bkg-pattern-glamour;
     h2 {
@@ -9,13 +9,13 @@
         font-family: $main-font;
         font-size: $font-h2;
         text-transform: uppercase;
-        margin-bottom: 8rem;
+        margin-bottom: $marginXlg;
     }
 }
 
 .box {
-    width: 18rem;
-    height: 18rem;
+    width: 14rem;
+    height: 14rem;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -50,7 +50,7 @@
 
 @media (min-width: 48em) {
     .box {
-        width: 22rem;
-        height: 22rem;
+        width: 18rem;
+        height: 18rem;
     }
 }

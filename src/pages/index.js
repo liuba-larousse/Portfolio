@@ -5,7 +5,6 @@ import Projects from '~/components/Projects/Projects'
 import Contact from '~/components/Contact/Contact'
 import About from '~/components/About/About'
 import SEO from '~/components/SEO/SEO'
-
 import Skills from '~/components/Skills/Skills'
 
 import '../css/main.scss'
@@ -23,17 +22,15 @@ export default function Home() {
         'border-radius: 20px ;',
     ].join(';')
     console.log(msg, styles)
+
     return (
         <Layout>
             <SEO title="Front-end Developer. HTML, CSS, JS, React" />
             <Hero />
-            <div className="parallax"></div>
             <Projects />
             <div className="parallax full_height">
                 <About />
             </div>
-            {/* <Skills />
-            <div className="parallax"></div> */}
             <Skills />
             <div className="parallax full_height">
                 <Contact />

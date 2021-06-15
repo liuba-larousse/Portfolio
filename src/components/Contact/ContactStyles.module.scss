@@ -9,37 +9,31 @@ Contact form
 $border-circle: 0.5rem;
 $color: $clr-primary;
 $width: 30rem;
-$height: $width * 1.6;
+$height: 45rem;
 $scale: 1.8;
+$circleWidth: 2rem;
+$circleHeight: 2rem;
 
 .section {
-    width: 100vw;
-    height: 100vh;
-    position: relative;
-}
+    width: 100%;
+    height: fit-content;
 
-.front {
-    position: absolute;
-    z-index: 10;
-    display: flex;
-    top: 50%; /* position the top  edge of the element at the middle of the parent */
-    left: 50%; /* position the left edge of the element at the middle of the parent */
-    transform: translate(-50%, -50%);
-}
-.back {
-    position: absolute;
-    z-index: 9;
-    top: 50%; /* position the top  edge of the element at the middle of the parent */
-    left: 50%; /* position the left edge of the element at the middle of the parent */
-    transform: translate(-58%, -58%);
+    h2 {
+        text-align: center;
+        font-family: $main-font;
+        font-size: $font-h2;
+        text-transform: uppercase;
+        margin: 0 auto $marginXlg auto;
+    }
 }
 
 .container {
     width: $width;
     height: $height;
     display: grid;
+    margin: 0 auto;
     grid-template-columns: 1fr;
-    grid-template-rows: 15% 85%;
+    grid-template-rows: 10% 90%;
     grid-template-areas:
         'top'
         'bottom';
@@ -47,10 +41,10 @@ $scale: 1.8;
 
 .top {
     border: $border solid $color;
-    border-top-right-radius: 20px;
-    border-top-left-radius: 20px;
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 3fr;
+    grid-template-columns: 1fr 1fr 1fr 6fr;
     grid-template-rows: 1fr;
     grid-template-areas: 'c1 c2 c3 . ';
     grid-area: top;
@@ -78,8 +72,8 @@ $scale: 1.8;
 }
 
 .circle {
-    width: 2.5rem;
-    height: 2.5rem;
+    width: $circleWidth;
+    height: $circleHeight;
     background-color: $clr-cirle;
     border-radius: 50px;
     border: $border-circle solid $color;
@@ -95,23 +89,22 @@ $scale: 1.8;
     border-left: $border solid $color;
     border-right: $border solid $color;
     border-bottom: $border solid $color;
-    border-bottom-right-radius: 20px;
-    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;
     background-color: $clr-bkg-darker;
     display: flex;
     flex-direction: column;
+    justify-content: center;
 }
 
 .text {
     // grid-area: text;
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
     p {
         margin: 2rem;
         font-size: $font-h3;
-        text-align: center;
     }
 }
 
@@ -137,12 +130,12 @@ $scale: 1.8;
     .container {
         width: $width * $scale;
         height: $height * $scale;
-        grid-template-rows: 25% 75%;
+        grid-template-rows: 15% 85%;
     }
     .circle {
-        width: 2.5rem * $scale;
-        height: 2.5rem * $scale;
-        border: $border-circle * $scale solid $color;
+        width: $circleWidth * 1.5;
+        height: $circleHeight * 1.5;
+        border: $border-circle * 1.5 solid $color;
     }
     .btn_contact {
         width: 30rem;

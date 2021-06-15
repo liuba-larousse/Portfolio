@@ -5,7 +5,11 @@ import { Link } from 'gatsby'
 import { InView } from 'react-intersection-observer'
 import { projects } from './projects-data'
 import BackgroundImage from 'gatsby-background-image'
-import { FaGithubSquare, FaStaylinked, FaChevronRight } from 'react-icons/fa'
+import {
+    FaGithubSquare,
+    FaExternalLinkSquareAlt,
+    FaChevronRight,
+} from 'react-icons/fa'
 
 export default function Projects() {
     const { allFile, allMarkdownRemark } = useStaticQuery(graphql`
@@ -70,7 +74,7 @@ export default function Projects() {
             <InView threshold={0.9}>
                 {({ inView, ref }) => (
                     <div ref={ref} className={s.title_box}>
-                        <div
+                        {/* <div
                             className={
                                 inView ? `${s.hr} ${s.hrAnimate}` : `${s.hr} `
                             }
@@ -79,26 +83,46 @@ export default function Projects() {
                             className={
                                 inView ? `${s.vl} ${s.vlAnimate}` : `${s.vl} `
                             }
-                        ></div>
-                        <Link
-                            className={s.title}
-                            to={markdown[project.id].node.frontmatter.slug}
-                        >
-                            <span className={s.projectName}>
-                                {project.field}
-                            </span>
-                            <span className={s.projectLink}>
-                                view project <FaChevronRight />
-                            </span>
-                            {/* <span className={s.links}>
+                        ></div> */}
+
+                        <div className={s.absolute}>
+                            <span className={s.caption}>Featured project</span>
+                            <Link
+                                className={s.pageLink}
+                                to={markdown[project.id].node.frontmatter.slug}
+                            >
+                                <h3 className={s.projectName}>
+                                    {project.field}
+                                </h3>
+
+                                <div className={s.description}>
+                                    <p> {project.description}</p>
+
+                                    {/* <span className={s.projectLink}>
+                                    view project <FaChevronRight />
+                                </span> */}
+                                </div>
+                            </Link>
+                            <div className={s.projectStack}>
+                                <span>{project.stack}</span>
+                            </div>
+                            <div className={s.links}>
                                 <a href={project.git} className={s.icon}>
                                     <FaGithubSquare />
                                 </a>
                                 <a href={project.url} className={s.icon}>
-                                    <FaStaylinked />
+                                    <FaExternalLinkSquareAlt />
                                 </a>
-                            </span> */}
-                        </Link>
+                                {/* <Link
+                                    to={
+                                        markdown[project.id].node.frontmatter
+                                            .slug
+                                    }
+                                >
+                                    Read more
+                                </Link> */}
+                            </div>
+                        </div>
                     </div>
                 )}
             </InView>
@@ -113,7 +137,7 @@ export default function Projects() {
                 data-sal-delay="250"
                 data-sal-easing="ease-in"
             >
-                Projects
+                Portfolio
             </h2>
 
             <div className={s.project_list}>{projectList}</div>

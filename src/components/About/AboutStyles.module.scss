@@ -9,37 +9,31 @@ Contact form
 $border-circle: 0.5rem;
 $color: $clr-primary;
 $width: 30rem;
-$height: $width * 1.8;
+$height: $width * 2.5;
 $scale: 1.8;
+$circleWidth: 2rem;
+$circleHeight: 2rem;
 
 .section {
-    width: 100vw;
-    height: 120vh;
-    position: relative;
-}
+    width: 100%;
+    height: fit-content;
 
-.front {
-    position: absolute;
-    z-index: 10;
-    display: flex;
-    top: 50%; /* position the top  edge of the element at the middle of the parent */
-    left: 50%; /* position the left edge of the element at the middle of the parent */
-    transform: translate(-50%, -50%);
-}
-.back {
-    position: absolute;
-    z-index: 9;
-    top: 50%; /* position the top  edge of the element at the middle of the parent */
-    left: 50%; /* position the left edge of the element at the middle of the parent */
-    transform: translate(-58%, -58%);
+    h2 {
+        text-align: center;
+        font-family: $main-font;
+        font-size: $font-h2;
+        text-transform: uppercase;
+        margin: 0 auto $marginXlg auto;
+    }
 }
 
 .container {
     width: $width;
     height: $height;
+    margin: 0 auto;
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: 15% 85%;
+    grid-template-rows: 7% 93%;
     grid-template-areas:
         'top'
         'bottom';
@@ -47,10 +41,10 @@ $scale: 1.8;
 
 .top {
     border: $border solid $color;
-    border-top-right-radius: 20px;
-    border-top-left-radius: 20px;
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 3fr;
+    grid-template-columns: 1fr 1fr 1fr 6fr;
     grid-template-rows: 1fr;
     grid-template-areas: 'c1 c2 c3 . ';
     grid-area: top;
@@ -78,8 +72,8 @@ $scale: 1.8;
 }
 
 .circle {
-    width: 2.5rem;
-    height: 2.5rem;
+    width: $circleWidth;
+    height: $circleHeight;
     background-color: $clr-cirle;
     border-radius: 50px;
     border: $border-circle solid $color;
@@ -95,8 +89,8 @@ $scale: 1.8;
     border-left: $border solid $color;
     border-right: $border solid $color;
     border-bottom: $border solid $color;
-    border-bottom-right-radius: 20px;
-    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;
     background-color: $clr-bkg-darker;
     display: flex;
     flex-direction: column;
@@ -104,18 +98,32 @@ $scale: 1.8;
 
 .text {
     // grid-area: text;
+    flex: 2;
     display: flex;
-    flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding-top: 10rem;
     overflow: auto;
     p {
         margin: 2rem;
-        font-size: $font-h4;
-        text-align: center;
+        font-size: $font-p;
     }
 }
+
+.imgContainer {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+}
+.img {
+    width: 250px;
+    height: 250px;
+    border: $clr-primary $border solid;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
 /* width */
 ::-webkit-scrollbar {
     width: 8px;
@@ -146,19 +154,23 @@ $scale: 1.8;
     .container {
         width: $width * $scale;
         height: $height * $scale;
-        grid-template-rows: 25% 75%;
+        grid-template-rows: 15% 85%;
+    }
+    .top {
+        grid-template-columns: 1fr 1fr 1fr 8fr;
     }
     .circle {
-        width: 2.5rem * $scale;
-        height: 2.5rem * $scale;
-        border: $border-circle * $scale solid $color;
+        width: $circleWidth * 1.5;
+        height: $circleHeight * 1.5;
+        border: $border-circle * 1.5 solid $color;
     }
-
+    .bottom {
+        flex-direction: row;
+    }
     .text {
         grid-area: text;
         padding-top: 0rem;
         p {
-            text-align: center;
             font-size: $font-h3;
         }
     }

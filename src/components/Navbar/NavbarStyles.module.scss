@@ -1,4 +1,4 @@
-@import "~/css/global-variables.module.scss";
+@import '~/css/global-variables.module.scss';
 
 /*
 =============== 
@@ -7,18 +7,67 @@ Navbar
 */
 
 nav {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  width: 100%;
-  color: $clr-primary;
-  position: fixed;
-  z-index: 30;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    color: $clr-primary;
+    position: fixed;
+    z-index: 30;
 }
 
-.nav_logo,
 .nav_toggle {
-  color: $clr-primary;
-  font-size: 5rem;
-  margin: 2rem;
+    color: $clr-primary;
+    font-size: 5rem;
+    margin: 2rem;
+    .sticky {
+        position: sticky;
+    }
+}
+
+.hidden {
+    display: none;
+}
+
+@media (min-width: 48rem) {
+    .links {
+        width: 50%;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        text-align: left;
+    }
+
+    .link {
+        color: $clr-primary;
+        text-transform: uppercase;
+        background-color: transparent;
+        border: none;
+        font-size: $font-p;
+        font-weight: 600;
+        margin-right: $marginSm;
+    }
+    .link:hover,
+    .link:active {
+        transition: all 0.5s ease-in-out;
+        cursor: pointer;
+    }
+}
+
+.pdfLink {
+    color: $clr-text-primarly;
+    text-transform: uppercase;
+    padding: $marginMd;
+    border: $clr-primary solid $border;
+    border-radius: $radius;
+    background-color: rgba(240, 148, 94, 0.63);
+    font-family: $main-font;
+    font-size: $font-p;
+    font-weight: 600;
+}
+
+@media (min-width: 48em) {
+    nav {
+        position: absolute;
+    }
 }

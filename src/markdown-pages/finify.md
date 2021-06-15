@@ -1,10 +1,12 @@
 ---
 slug: '/projects/finify'
-id: '2'
+id: '3'
 title: 'Finify - Web Design Agency Website '
-image: 'project_4.png'
+image: 'project_3.png'
 url: 'https://www.finify.expert/'
 git: 'https://github.com/liuba-larousse/gatsby-finify'
+stack: 'SASS · REACT · GATSBY · GRAPHQL · NETLIFY'
+description: 'Finify project was created by me to improve my design skills, and implement new features like submit the form and switching between dark and light modes. It is a mock landing page with a unique design, where prospect customers can submit their inquires about a future project.'
 ---
 
 ## Stack

@@ -12,19 +12,12 @@ export default function Sidebar({ closeSidebar }) {
                     // className={{ isActive } ? " nav-links fadeIn" : " nav-links collapsed"}
                 >
                     <li>
-                        <Link className={s.link} to="/">
-                            {' '}
-                            <h2>home</h2>
-                        </Link>
-                    </li>
-
-                    <li>
                         <button
                             className={s.link}
-                            onClick={() => scrollTo('#skills')}
+                            onClick={() => scrollTo('#projects')}
                         >
                             {' '}
-                            <h2>skills </h2>
+                            portfolio
                         </button>
                     </li>
                     <li>
@@ -33,17 +26,16 @@ export default function Sidebar({ closeSidebar }) {
                             onClick={() => scrollTo('#about')}
                         >
                             {' '}
-                            <h2>about me </h2>
+                            about me
                         </button>
                     </li>
 
                     <li>
                         <button
                             className={s.link}
-                            onClick={() => scrollTo('#projects')}
+                            onClick={() => scrollTo('#skills')}
                         >
-                            {' '}
-                            <h2>projects </h2>
+                            skills
                         </button>
                     </li>
                     <li>
@@ -52,8 +44,13 @@ export default function Sidebar({ closeSidebar }) {
                             onClick={() => scrollTo('#contact')}
                         >
                             {' '}
-                            <h2>contact </h2>
+                            contact
                         </button>
+                    </li>
+                    <li>
+                        <Link className={s.pdfLink} to="/pdf">
+                            Resume
+                        </Link>
                     </li>
                 </ul>
             </nav>
