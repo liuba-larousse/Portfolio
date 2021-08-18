@@ -50,7 +50,7 @@ export default function Projects() {
     const images = allFile.nodes
     const markdown = allMarkdownRemark.edges
 
-    const projectList = projects.slice(0, 4).map((project, index) => (
+    const projectList = projects.slice(0, 5).map((project, index) => (
         <div
             className={s.project_list_item}
             key={index}

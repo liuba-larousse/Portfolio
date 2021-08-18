@@ -22,6 +22,17 @@ const projects = [
     {
         id: 2,
         image: 'project_2.png',
+        field: 'GitHub API Search App',
+        name: 'GitHub Search',
+        url: 'https://gatsby-githubapi-app.netlify.app/',
+        git: 'https://github.com/liuba-larousse/gatsby-github-api-test',
+        stack: 'Gatsby · GitHub API · SaSS · Netlify ',
+        description:
+            'A web application that using GitHub API to show git commit history of this project with GitHub Search functionality.',
+    },
+    {
+        id: 3,
+        image: 'project_3.png',
         field: 'One-Product Ecommerce Website',
         name: 'Sovemykt',
         url: 'http://www.sovemykt.me/',
@@ -32,8 +43,8 @@ const projects = [
             'E-Commerce fast-loading high-performance web app with full cart functionality. Intergrated Shopify API that shop, add products to a cart, and checkout. Google Sheets API for content management.',
     },
     {
-        id: 3,
-        image: 'project_3.png',
+        id: 4,
+        image: 'project_4.png',
         field: 'Web-design agency Website',
         name: 'Finify',
         url: 'https://www.finify.expert/',
@@ -43,8 +54,8 @@ const projects = [
             ' It is a mock landing page with a unique design, where prospect customers can submit their inquires about a future project. Interesting features switching between DARK and LIGHT mode and Custom React Hook for form submition',
     },
     {
-        id: 4,
-        image: 'project_4.png',
+        id: 5,
+        image: 'project_5.png',
         field: 'Music Production Studio Website',
         name: 'Rich Boy Mafia',
         url: 'https://www.richboymafia.com/',
