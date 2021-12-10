@@ -2,7 +2,7 @@ const projects = [
     {
         id: 0,
         image: 'project_0.png',
-        name: 'Hotel Search React App',
+        title: 'Hotel Search React App',
         url: 'https://react-hotelsearch-demo-app.netlify.app/',
         git: 'https://github.com/liuba-larousse/react-hotelsearch-demo-json',
         stack: 'Sass · React · Material UI · Netlify',
@@ -12,7 +12,7 @@ const projects = [
     {
         id: 1,
         image: 'project_1.png',
-        name: 'Instagram Clone App',
+        title: 'Instagram Clone App',
         url: 'https://instagram-clone-by-liuba.netlify.app/',
         git: 'https://github.com/liuba-larousse/react-firebase-instagram-clone',
         stack: 'React ·  Firebase · Material UI · Netlify',
@@ -22,8 +22,7 @@ const projects = [
     {
         id: 2,
         image: 'project_2.png',
-        field: 'GitHub API Search App',
-        name: 'GitHub Search',
+        title: 'GitHub API Search App',
         url: 'https://gatsby-githubapi-app.netlify.app/',
         git: 'https://github.com/liuba-larousse/gatsby-github-api-test',
         stack: 'Gatsby · GitHub API · SaSS · Netlify ',
@@ -33,8 +32,7 @@ const projects = [
     {
         id: 3,
         image: 'project_3.png',
-        field: 'One-Product Ecommerce Website',
-        name: 'Sovemykt',
+        title: 'One-Product Ecommerce Website',
         url: 'http://www.sovemykt.me/',
         git: 'https://github.com/liuba-larousse/shopify-sovemykt',
         stack:
@@ -45,8 +43,7 @@ const projects = [
     {
         id: 4,
         image: 'project_4.png',
-        field: 'Web-design agency Website',
-        name: 'Finify',
+        title: 'Web-design agency Website',
         url: 'https://www.finify.expert/',
         git: 'https://github.com/liuba-larousse/gatsby-finify',
         stack: 'Sass · React · Gatsby · GraphQL · Netlify',
@@ -56,8 +53,7 @@ const projects = [
     {
         id: 5,
         image: 'project_5.png',
-        field: 'Music Production Studio Website',
-        name: 'Rich Boy Mafia',
+        title: 'Music Production Studio Website',
         url: 'https://www.richboymafia.com/',
         git: 'https://github.com/liuba-larousse/gatsby_rbm',
         stack: 'SASS · REACT · GATSBY · GRAPHQL · NETLIFY',

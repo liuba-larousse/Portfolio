@@ -17,7 +17,7 @@ export default function About() {
     `)
 
     const image = file.childImageSharp.fluid
-    console.log('image', image)
+
     return (
         <section className={s.section} id="about">
             <h2

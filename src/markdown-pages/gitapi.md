@@ -5,13 +5,14 @@ title: 'GitHub API search App'
 image: 'project_2.png'
 url: 'https://gatsby-githubapi-app.netlify.app/'
 git: 'https://github.com/liuba-larousse/gatsby-github-api-test'
+stack: '<ul><li>🧱 React/Gatsby </li><li>📒 GitHub API</li><li>🗄️ GrpahQL</li><li>🎨 SCSS</li><li>🚀 Netlify</li></ul>'
 ---
 
-## Stack
+<!-- ## Stack
 
-🧱 Gatsby 📒 GitHub API 🎨 SaSS 🚀 Netlify
+🧱 Gatsby 📒 GitHub API 🎨 SaSS 🚀 Netlify -->
 
-## Features
+<!-- ## Features
 
 -   ✅ GitHub API used
 
@@ -19,7 +20,7 @@ git: 'https://github.com/liuba-larousse/gatsby-github-api-test'
     -   ⭐ Display commit history
     -   ⭐ Map out git repositories related to gatsby framwork
 
--   ✅ Search functionality with Apollo
+-   ✅ Search functionality with Apollo -->
 
 ## Description
 

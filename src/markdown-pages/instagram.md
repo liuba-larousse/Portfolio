@@ -5,9 +5,10 @@ title: 'Instagram Clone React App'
 image: 'project_1.png'
 url: 'https://instagram-clone-by-liuba.netlify.app/'
 git: 'https://github.com/liuba-larousse/react-firebase-instagram-clone'
+stack: '<ul><li>🧱 React </li><li>🔥 Firebase</li><li>🎨 Material UI </li><li>🚀 Netlify</li></ul>'
 ---
 
-## Stack
+<!-- ## Stack
 
 🧱 React 🔥 Firebase 🎨 Material UI 🚀 Netlify
 
@@ -35,7 +36,7 @@ git: 'https://github.com/liuba-larousse/react-firebase-instagram-clone'
 
 ⭐ Icons
 
-⭐ useStyles for styling
+⭐ useStyles for styling -->
 
 ## Description
 

@@ -5,18 +5,18 @@ title: 'Finify - Web Design Agency Website '
 image: 'project_4.png'
 url: 'https://www.finify.expert/'
 git: 'https://github.com/liuba-larousse/gatsby-finify'
-stack: 'SASS · REACT · GATSBY · GRAPHQL · NETLIFY'
-description: 'Finify project was created by me to improve my design skills, and implement new features like submit the form and switching between dark and light modes. It is a mock landing page with a unique design, where prospect customers can submit their inquires about a future project.'
+
+stack: '<ul><li>🧱 REACT/GATSBY </li><li>🗄️ GRAPHQL</li><li>🎨 SCSS</li><li>🚀 NETLIFY</li></ul>'
 ---
 
-## Stack
+<!-- ## Stack
 
 -   ADOBE XD + PS
 -   SASS
 -   REACT
 -   GATSBY
 -   GRAPHQL
--   NETLIFY
+-   NETLIFY -->
 
 ## Description
 

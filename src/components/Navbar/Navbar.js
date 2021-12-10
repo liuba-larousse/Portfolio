@@ -1,6 +1,5 @@
 import React from 'react'
 import { AiOutlineClose } from 'react-icons/ai'
-import { GiFairyWings } from 'react-icons/gi'
 import scrollTo from 'gatsby-plugin-smoothscroll'
 import { Link } from 'gatsby'
 
@@ -45,14 +44,26 @@ export default function Navbar({ isOpen, toggleSidebar, closeSidebar }) {
                 />
             ) : (
                 <nav>
-                    <GiFairyWings
+                    {/* <GiFairyWings
                         className={s.nav_toggle}
                         onClick={
                             size.width && size.width < 800
                                 ? () => toggleSidebar()
                                 : null
                         }
-                    />
+                    /> */}
+                    <img
+                        src="/images/logo.png"
+                        alt="logo"
+                        width="80"
+                        height="80"
+                        className={s.nav_toggle}
+                        onClick={
+                            size.width && size.width < 800
+                                ? () => toggleSidebar()
+                                : null
+                        }
+                    ></img>
 
                     <ul
                         className={`${s.links} ${s.hidden}`}

@@ -2,7 +2,7 @@
 
 .button {
     width: 30rem;
-    border-radius: 10px;
+    border-radius: 4px;
     background-color: transparent;
     border: $border solid $clr-primary;
     padding: 2rem 0;
@@ -26,9 +26,7 @@
 
 .flash_wait {
     width: fit-content;
-    border-radius: 10px;
     background-color: transparent;
-    border: $border solid $clr-primary;
     padding: 2rem 0;
     cursor: pointer;
     font-family: $secondary-font;

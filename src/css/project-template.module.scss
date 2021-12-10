@@ -1,7 +1,7 @@
 @import './resets', '~/css/global-variables.module.scss';
 
 /*
-=============== 
+===============
 Project Template
 ===============
 */
@@ -12,26 +12,44 @@ Project Template
     margin: 0 auto;
     width: 80%;
     padding-bottom: $marginMd;
+    font-family: $main-font;
     h1,
     h2 {
         text-align: left;
-        color: $clr-cirle;
+        color: $clr-text-primarly;
+        margin-bottom: $marginMd;
+        margin-top: $marginMd;
     }
 }
 .container,
 .container > * {
-    margin-top: $marginLg;
-    margin-bottom: $marginLg;
     text-align: justify;
+}
+
+.frontmatter {
+    summary {
+        text-transform: uppercase;
+        font-style: italic;
+    }
+    a {
+        color: $clr-text-primarly;
+        font-style: italic;
+        text-decoration: underline;
+    }
+}
+
+.stack {
+    li {
+        font-size: $font-h3;
+        font-weight: 600;
+    }
 }
 
 .homeLink {
     position: fixed;
     z-index: 30;
-    color: $clr-primary;
-    font-size: 5rem;
     margin: 2rem;
-    transform: translateY(-3.2rem);
+    font-weight: 100;
 }
 .image {
     margin-top: $marginLg;
@@ -71,6 +89,8 @@ Project Template
 
 .linkName {
     margin-left: 0.5rem;
+    text-transform: uppercase;
+    font-weight: 600;
 }
 @keyframes flash-link {
     0%,

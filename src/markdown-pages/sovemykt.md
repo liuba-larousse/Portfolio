@@ -5,8 +5,10 @@ title: 'Sovemykt - One-Product Ecommerce Website'
 image: 'project_3.png'
 url: 'http://www.sovemykt.me/'
 git: 'https://github.com/liuba-larousse/shopify-sovemykt'
+stack: '<ul><li>🧱 React/Gatsby </li><li>📒 Googlesheets API</li><li>📒 Shopify SDK API</li><li>🗄️ GRAPHQL</li><li>🎨 SASS</li><li>🚀 Netlify</li></ul>'
 ---
 
+<!--
 ## Stack
 
 -   ADOBE XD + PS
@@ -16,7 +18,7 @@ git: 'https://github.com/liuba-larousse/shopify-sovemykt'
 -   GRAPHQL
 -   Googlesheets API
 -   Shopify SDK API
--   NETLIFY
+-   NETLIFY -->
 
 ## Description
 

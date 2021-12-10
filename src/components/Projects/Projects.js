@@ -5,11 +5,7 @@ import { Link } from 'gatsby'
 import { InView } from 'react-intersection-observer'
 import { projects } from './projects-data'
 import BackgroundImage from 'gatsby-background-image'
-import {
-    FaGithubSquare,
-    FaExternalLinkSquareAlt,
-    FaChevronRight,
-} from 'react-icons/fa'
+import { FaGithubSquare, FaExternalLinkSquareAlt } from 'react-icons/fa'
 
 export default function Projects() {
     const { allFile, allMarkdownRemark } = useStaticQuery(graphql`
@@ -74,17 +70,6 @@ export default function Projects() {
             <InView threshold={0.9}>
                 {({ inView, ref }) => (
                     <div ref={ref} className={s.title_box}>
-                        {/* <div
-                            className={
-                                inView ? `${s.hr} ${s.hrAnimate}` : `${s.hr} `
-                            }
-                        ></div>
-                        <div
-                            className={
-                                inView ? `${s.vl} ${s.vlAnimate}` : `${s.vl} `
-                            }
-                        ></div> */}
-
                         <div className={s.absolute}>
                             <span className={s.caption}>Featured project</span>
                             <Link
@@ -92,15 +77,11 @@ export default function Projects() {
                                 to={markdown[project.id].node.frontmatter.slug}
                             >
                                 <h3 className={s.projectName}>
-                                    {project.field}
+                                    {project.title}
                                 </h3>
 
                                 <div className={s.description}>
                                     <p> {project.description}</p>
-
-                                    {/* <span className={s.projectLink}>
-                                    view project <FaChevronRight />
-                                </span> */}
                                 </div>
                             </Link>
                             <div className={s.projectStack}>
@@ -113,14 +94,6 @@ export default function Projects() {
                                 <a href={project.url} className={s.icon}>
                                     <FaExternalLinkSquareAlt />
                                 </a>
-                                {/* <Link
-                                    to={
-                                        markdown[project.id].node.frontmatter
-                                            .slug
-                                    }
-                                >
-                                    Read more
-                                </Link> */}
                             </div>
                         </div>
                     </div>

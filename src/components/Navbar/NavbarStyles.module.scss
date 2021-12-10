@@ -1,7 +1,7 @@
 @import '~/css/global-variables.module.scss';
 
 /*
-=============== 
+===============
 Navbar
 ===============
 */
@@ -19,6 +19,7 @@ nav {
 .nav_toggle {
     color: $clr-primary;
     font-size: 5rem;
+
     margin: 2rem;
     .sticky {
         position: sticky;

@@ -5,9 +5,10 @@ title: 'Hotel Search React App'
 image: 'project_0.png'
 url: 'https://react-hotelsearch-demo-app.netlify.app/'
 git: 'https://github.com/liuba-larousse/react-hotelsearch-demo-json'
+stack: '<ul><li>🧱 React </li><li>🎨 Material UI</li><li>🎨 SCSS</li><li>🚀 Netlify</li></ul>'
 ---
 
-## Stack
+<!-- ## Stack
 
 🧱 React 🎨 Material UI 🎨 SCSS 🚀 Netlify
 
@@ -43,7 +44,7 @@ git: 'https://github.com/liuba-larousse/react-hotelsearch-demo-json'
 
 ⭐ Typography, Cards, Buttons, Links
 
-⭐ Icons
+⭐ Icons -->
 
 ## Description
 
@@ -51,7 +52,7 @@ This project was built with intention of practicing and learning basic React ski
 The project is inspired by my love for traveling and AirBnb landing page design. The project consists of a hotel search landing page, which takes a list of hotels from JSON and displays the information about each hotel on the landing page.
 Hotels can be sorted by few parameters like price, rating, and reviews based on the data, that is stored in JSON objects related to each hotel. When a particular hotel is clicked, a dynamic page is created for it with the display of more detailed information about the hotel.
 
-### Learnings
+## Learnings
 
 💡 📖 See what I have [LEARNED](https://github.com/liuba-larousse/react-hotelsearch-demo-json/blob/dynamic-pages/LEARNINGS.md) building this project.
 
@@ -166,7 +167,7 @@ Here are some things I learned while building this website:
 
      <br>
 
-## Material UI
+### Material UI
 
 -   🥥🌿 In `<Typography/>` element always specify
 
@@ -199,7 +200,7 @@ Here are some things I learned while building this website:
 
     <br>
 
-## CSS
+### CSS
 
 -   🥥 Center backround image with css:
 
@@ -225,7 +226,7 @@ Here are some things I learned while building this website:
 
      <br>
 
-## Netlify
+### Netlify
 
 -   🥥 In `package.json` add`"homepage": "./"`
 -   🥥 In `netfily,toml` add `[build] publish = "build/"`
@@ -235,7 +236,7 @@ Here are some things I learned while building this website:
 
 <br>
 
-## Other
+### Other
 
 -   🌴 README
 

@@ -1,11 +1,5 @@
 import React from 'react'
-import {
-    FaInstagramSquare,
-    FaGithubSquare,
-    // FaDribbbleSquare,
-    FaBehanceSquare,
-    FaLinkedin,
-} from 'react-icons/fa'
+import { FaGithubSquare, FaLinkedin } from 'react-icons/fa'
 import { FiCodesandbox } from 'react-icons/fi'
 
 const social = [
