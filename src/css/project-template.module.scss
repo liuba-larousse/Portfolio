@@ -19,6 +19,8 @@ Project Template
         color: $clr-text-primarly;
         margin-bottom: $marginMd;
         margin-top: $marginMd;
+        font-size: $font-h3;
+        text-transform: uppercase;
     }
 }
 
@@ -36,8 +38,9 @@ Project Template
 
 .stack {
     li {
-        font-size: $font-h3;
+        font-size: $font-p;
         font-weight: 600;
+        text-transform: uppercase;
     }
 }
 

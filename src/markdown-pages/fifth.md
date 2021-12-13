@@ -15,9 +15,7 @@ Commercial landing page created with delightful eye-catching design. Integrated 
 ## Implemented solutions
 
 ✅ Created from scratch efficient reusable React components.
-<br/>
-<br/>
+
 ✅ Build conent model in Contentful CMS for easy content management.
-<br/>
-<br/>
+
 ✅ Integrated CMS with Front-End through writing GraphQL quieries.
