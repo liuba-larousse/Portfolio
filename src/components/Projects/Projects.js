@@ -46,6 +46,20 @@ export default function Projects() {
     const images = allFile.nodes
     const markdown = allMarkdownRemark.edges
 
+    console.log(images)
+
+    const findImage = selected => {
+        const selectedImage = images.find(
+            image => image.childImageSharp.fluid.originalName === selected
+        )
+        return (
+            <BackgroundImage
+                className={s.img_each}
+                fluid={selectedImage.childImageSharp.fluid}
+            />
+        )
+    }
+
     const projectList = projects.slice(0, 5).map((project, index) => (
         <div
             className={s.project_list_item}
@@ -61,10 +75,11 @@ export default function Projects() {
                     // href={project.url}
                     to={markdown[project.id].node.frontmatter.slug}
                 />
-                <BackgroundImage
+                {findImage(project.image)}
+                {/* <BackgroundImage
                     className={s.img_each}
                     fluid={images[project.id].childImageSharp.fluid}
-                />
+                /> */}
             </div>
 
             <InView threshold={0.9}>

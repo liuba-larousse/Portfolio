@@ -50,19 +50,29 @@ export default function About() {
                 <div className={s.bottom}>
                     <div className={s.text}>
                         <p>
-                            Born and raised in Russia ,I have been living in US
-                            for past 10 years, with my base in awesome Austin,
-                            TX now. After working in customer service and
-                            healthcare positions for past few years, my desire
-                            for learning, progress and creativity as well as my
-                            love for technology have lead me to explore the tech
-                            world.
+                            Born in Russia, I have lived in the US for the past
+                            ten years, currently based in Austin, TX. I dance
+                            Kizomba 💃, do yoga 🧘‍♀️, travel a lot ✈️ and write
+                            front-end code 👩‍💻.
                             <br />
-                            <br />I have been self-taught developer for a year
-                            now. It has been a challanging and fun journey that
-                            I hope to explore for many years now, and help
-                            others along the way by creating innovative,
-                            human-centered and accessible web applications.
+                            <br />I am passionate about creating a{' '}
+                            <strong> meaningful user-friendly</strong> web
+                            applications. I love working with
+                            <strong> React</strong>. Other technologies I have
+                            experience with include:
+                            <strong> TypeScript</strong>,
+                            <strong> GraphQL</strong> , various UI libraries,
+                            CMS like <strong> Firebase</strong>, and
+                            <strong> Contentful</strong>. I am comfortable
+                            building from scratch or adding features in already
+                            exciting projects.
+                            <br />
+                            <br />
+                            Presently I am looking for a
+                            <strong> remote front-end </strong>
+                            position in an organization with a great work-life
+                            balance culture ☯︎ , which aims to create purposeful
+                            technologies to help people 🙌.
                         </p>
                     </div>
                     <div className={s.imgContainer}>

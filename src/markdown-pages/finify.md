@@ -1,11 +1,10 @@
 ---
 slug: '/projects/finify'
-id: '4'
+id: '5'
 title: 'Finify - Web Design Agency Website '
-image: 'project_4.png'
+image: 'web_agency.png'
 url: 'https://www.finify.expert/'
 git: 'https://github.com/liuba-larousse/gatsby-finify'
-
 stack: '<ul><li>🧱 REACT/GATSBY </li><li>🗄️ GRAPHQL</li><li>🎨 SCSS</li><li>🚀 NETLIFY</li></ul>'
 ---
 

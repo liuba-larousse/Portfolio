@@ -1,7 +1,7 @@
 import React from 'react'
-import { FaHtml5, FaCss3Alt, FaReact, FaSass, FaShopify } from 'react-icons/fa'
+import { FaHtml5, FaCss3Alt, FaReact, FaSass } from 'react-icons/fa'
 import { GrGraphQl, GrGatsbyjs } from 'react-icons/gr'
-import { SiNetlify, SiJavascript } from 'react-icons/si'
+import { SiNetlify, SiJavascript, SiTypescript } from 'react-icons/si'
 
 const skills = [
     {
@@ -42,8 +42,8 @@ const skills = [
     },
     {
         id: 7,
-        name: 'Shopify',
-        icon: <FaShopify />,
+        name: 'Typescript',
+        icon: <SiTypescript />,
     },
     {
         id: 8,

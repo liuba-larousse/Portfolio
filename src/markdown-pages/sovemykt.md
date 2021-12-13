@@ -1,8 +1,8 @@
 ---
 slug: '/projects/sovemykt'
-id: '3'
+id: '4'
 title: 'Sovemykt - One-Product Ecommerce Website'
-image: 'project_3.png'
+image: 'ecom_store.png'
 url: 'http://www.sovemykt.me/'
 git: 'https://github.com/liuba-larousse/shopify-sovemykt'
 stack: '<ul><li>🧱 React/Gatsby </li><li>📒 Googlesheets API</li><li>📒 Shopify SDK API</li><li>🗄️ GRAPHQL</li><li>🎨 SASS</li><li>🚀 Netlify</li></ul>'

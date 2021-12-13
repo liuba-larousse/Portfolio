@@ -2,7 +2,7 @@
 slug: '/projects/hotel-search'
 id: '0'
 title: 'Hotel Search React App'
-image: 'project_0.png'
+image: 'hotel_search.png'
 url: 'https://react-hotelsearch-demo-app.netlify.app/'
 git: 'https://github.com/liuba-larousse/react-hotelsearch-demo-json'
 stack: '<ul><li>🧱 React </li><li>🎨 Material UI</li><li>🎨 SCSS</li><li>🚀 Netlify</li></ul>'

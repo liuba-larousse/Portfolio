@@ -2,7 +2,7 @@
 slug: '/projects/gitapi'
 id: '2'
 title: 'GitHub API search App'
-image: 'project_2.png'
+image: 'github_app.png'
 url: 'https://gatsby-githubapi-app.netlify.app/'
 git: 'https://github.com/liuba-larousse/gatsby-github-api-test'
 stack: '<ul><li>🧱 React/Gatsby </li><li>📒 GitHub API</li><li>🗄️ GrpahQL</li><li>🎨 SCSS</li><li>🚀 Netlify</li></ul>'

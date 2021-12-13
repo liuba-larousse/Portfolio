@@ -2,7 +2,7 @@
 slug: '/projects/instagram'
 id: '1'
 title: 'Instagram Clone React App'
-image: 'project_1.png'
+image: 'insta_clone.png'
 url: 'https://instagram-clone-by-liuba.netlify.app/'
 git: 'https://github.com/liuba-larousse/react-firebase-instagram-clone'
 stack: '<ul><li>🧱 React </li><li>🔥 Firebase</li><li>🎨 Material UI </li><li>🚀 Netlify</li></ul>'
