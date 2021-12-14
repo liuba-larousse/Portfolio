@@ -19,7 +19,6 @@ nav {
 .nav_toggle {
     color: $clr-primary;
     font-size: 5rem;
-
     margin: 2rem;
     .sticky {
         position: sticky;
@@ -52,6 +51,7 @@ nav {
     .link:active {
         transition: all 0.5s ease-in-out;
         cursor: pointer;
+        color: $clr-text-primarly;
     }
 }
 
