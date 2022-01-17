@@ -68,11 +68,13 @@ export default function About() {
                             exciting projects.
                             <br />
                             <br />
-                            Presently I am looking for a
-                            <strong> remote front-end </strong>
-                            position in an organization with a great work-life
-                            balance culture ☯︎ , which aims to create purposeful
-                            technologies to help people 🙌.
+                            Presently I am looking for a{' '}
+                            <strong>frontend </strong>
+                            position in an organization n a team with a
+                            collaborative mindset and healthy culture. I am
+                            motivated by building technology with purpose, which
+                            aims to benefit our communities and society in large
+                            🙌.
                         </p>
                     </div>
                     <div className={s.imgContainer}>

@@ -35,7 +35,7 @@ export default function Hero() {
                         </h1>
                         <h1>
                             {' '}
-                            Front-end{' '}
+                            Frontend{' '}
                             <span className={s.titleHighlight}>Developer</span>
                         </h1>
 
