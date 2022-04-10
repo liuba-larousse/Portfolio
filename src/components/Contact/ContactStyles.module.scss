@@ -1,0 +1,157 @@
+@import '~/css/global-variables.module.scss';
+
+/*
+=============== 
+Contact form
+===============
+*/
+
+$border-circle: 0.5rem;
+$color: $clr-primary;
+$width: 30rem;
+$height: $width * 1.6;
+$scale: 1.8;
+
+.section {
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+}
+
+.front {
+    position: absolute;
+    z-index: 10;
+    display: flex;
+    top: 50%; /* position the top  edge of the element at the middle of the parent */
+    left: 50%; /* position the left edge of the element at the middle of the parent */
+    transform: translate(-50%, -50%);
+}
+.back {
+    position: absolute;
+    z-index: 9;
+    top: 50%; /* position the top  edge of the element at the middle of the parent */
+    left: 50%; /* position the left edge of the element at the middle of the parent */
+    transform: translate(-58%, -58%);
+}
+
+.container {
+    width: $width;
+    height: $height;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 15% 85%;
+    grid-template-areas:
+        'top'
+        'bottom';
+}
+
+.top {
+    border: $border solid $color;
+    border-top-right-radius: 20px;
+    border-top-left-radius: 20px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 3fr;
+    grid-template-rows: 1fr;
+    grid-template-areas: 'c1 c2 c3 . ';
+    grid-area: top;
+    background-color: $clr-bkg-darker;
+}
+
+.c1 {
+    grid-area: c1;
+}
+
+.c2 {
+    grid-area: c2;
+}
+
+.c3 {
+    grid-area: c3;
+}
+
+.c1,
+.c2,
+.c3 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.circle {
+    width: 2.5rem;
+    height: 2.5rem;
+    background-color: $clr-cirle;
+    border-radius: 50px;
+    border: $border-circle solid $color;
+    margin: 0.8rem auto;
+    transition: 0.3s ease-in;
+}
+.circle:hover {
+    background-color: $clr-text-primarly;
+}
+
+.bottom {
+    grid-area: bottom;
+    border-left: $border solid $color;
+    border-right: $border solid $color;
+    border-bottom: $border solid $color;
+    border-bottom-right-radius: 20px;
+    border-bottom-left-radius: 20px;
+    background-color: $clr-bkg-darker;
+    display: flex;
+    flex-direction: column;
+}
+
+.text {
+    // grid-area: text;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    p {
+        margin: 2rem;
+        font-size: $font-h3;
+        text-align: center;
+    }
+}
+
+.links {
+    flex-direction: row;
+    justify-content: space-between;
+    width: 80%;
+    max-width: 30rem;
+    margin: 2rem auto;
+}
+
+//button
+
+.btn_contact {
+    width: 85%;
+    margin: 2rem 0rem;
+}
+
+// // Medium devices (tablets, 768px and up)
+@media (min-width: 48em) {
+    $width: 35rem;
+    $height: $width / 1.5;
+    .container {
+        width: $width * $scale;
+        height: $height * $scale;
+        grid-template-rows: 25% 75%;
+    }
+    .circle {
+        width: 2.5rem * $scale;
+        height: 2.5rem * $scale;
+        border: $border-circle * $scale solid $color;
+    }
+    .btn_contact {
+        width: 30rem;
+    }
+    .text {
+        grid-area: text;
+
+        p {
+            text-align: center;
+        }
+    }
+}

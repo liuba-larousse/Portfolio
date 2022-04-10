@@ -1,0 +1,48 @@
+@import "./resets", "~/css/global-variables.module.scss";
+/*
+=============== 
+About page
+===============
+*/
+
+.section {
+  width: 80%;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 1fr;
+  grid-gap: 5rem;
+  grid-template-areas:
+    "image"
+    "article";
+}
+
+.image_area {
+  grid-area: image;
+}
+.article {
+  grid-area: article;
+  p {
+    width: 100%;
+    text-align: justify;
+    margin: 0;
+  }
+  h1 {
+    text-align: left;
+  }
+}
+
+.image {
+  margin: 2rem auto;
+  border-radius: $radius;
+  box-shadow: $shadow;
+}
+
+@media (min-width: 48em) {
+  .section {
+    display: grid;
+    grid-template-columns: 40% 60%;
+    grid-template-rows: auto;
+    grid-template-areas: "image article";
+  }
+}

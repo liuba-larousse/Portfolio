@@ -1,0 +1,225 @@
+@import '~/css/global-variables.module.scss';
+
+.section {
+    position: relative;
+    padding-top: 10rem;
+    height: fit-content;
+    h2 {
+        text-align: center;
+        font-family: $main-font;
+        font-size: $font-h2;
+        text-transform: uppercase;
+        margin-bottom: 8rem;
+    }
+}
+
+.project_list {
+    display: flex;
+    flex-direction: column;
+}
+.img {
+    z-index: 3;
+    position: relative;
+}
+
+.img_each {
+    width: 100%;
+    min-height: 45rem;
+    height: 100%;
+    background-position: top center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: transparentize($clr-primary, 0.9);
+    z-index: 4;
+    transition: all 0.3s ease-in;
+    cursor: pointer;
+    &:hover,
+    &:focus,
+    &:active {
+        background-color: transparent;
+    }
+}
+
+.title_box {
+    min-height: 45rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    span {
+        font-family: $secondary-font;
+        text-transform: uppercase;
+        font-size: $font-h4;
+    }
+    transition: 0.5s ease-in-out;
+}
+
+.title_box:hover,
+.title_box:focus,
+.title_box:active {
+    transform: scale(1.1, 1.1);
+}
+
+.title {
+    background: $clr-bkg-darker;
+    width: 22rem;
+    height: 22rem;
+    border: 1px solid $clr-primary;
+    border-radius: $radius;
+    padding: 1.6rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.projectName {
+    text-align: center;
+    font-weight: 600;
+    color: $clr-text-primarly;
+}
+
+.projectLink {
+    font-weight: 400;
+    color: $clr-primary;
+    text-align: center;
+    line-height: 2rem;
+    display: flex;
+    align-items: center;
+    padding: $marginSm;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.links {
+    margin-top: 1rem;
+    & :nth-child(2) {
+        margin-left: 1rem;
+    }
+}
+
+.icon {
+    color: $clr-primary;
+    font-size: 3.5rem;
+}
+
+.icon:hover {
+    cursor: pointer;
+    animation-name: flash-link;
+    animation-duration: 1s;
+    animation-fill-mode: both;
+}
+@keyframes flash-link {
+    0%,
+    50%,
+    100% {
+        color: $clr-text-primarly;
+    }
+    25%,
+    75% {
+        color: $clr-primary;
+    }
+}
+
+.hr {
+    width: 100%;
+    height: 1px;
+    background: linear-gradient(
+        90deg,
+        rgba(214, 65, 98, 0) 0%,
+        $clr-primary 20%,
+        $clr-primary 70%,
+        rgba(214, 65, 98, 0) 100%
+    );
+    position: absolute;
+    z-index: -1;
+}
+
+.hrAnimate {
+    animation-name: expand;
+    animation-duration: 1.2s;
+    animation-timing-function: ease-in-out;
+}
+
+@keyframes expand {
+    from {
+        height: 1px;
+        width: 0;
+    }
+    to {
+        height: 1px;
+        width: 100%;
+    }
+}
+
+.vl {
+    // border-left: 1px solid #d64162;
+    background: linear-gradient(
+        0deg,
+        rgba(214, 65, 98, 0) 0%,
+        $clr-primary 20%,
+        $clr-primary 70%,
+        rgba(214, 65, 98, 0) 100%
+    );
+    width: 1px;
+    height: 100%;
+    position: absolute;
+    z-index: -1;
+}
+
+.vlAnimate {
+    animation-name: expand-vertical;
+    animation-duration: 1s;
+    animation-timing-function: ease-in-out;
+}
+
+@keyframes expand-vertical {
+    from {
+        height: 0;
+    }
+    to {
+        height: 100%;
+    }
+}
+
+@media (min-width: 48rem) {
+    .project_list {
+        width: 80%;
+        margin: 0 auto;
+        overflow: hidden;
+    }
+    .project_list_item {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        transition: all 0.3s ease-in-out;
+    }
+    .project_list_item:nth-child(odd) {
+        flex-direction: row-reverse;
+    }
+
+    .vl {
+        height: 100%;
+    }
+
+    .img {
+        flex: 1;
+    }
+
+    .title_box {
+        flex: 1;
+        height: 30rem;
+    }
+}
+
+@media (min-width: 62rem) {
+    .title_box {
+        height: 40rem;
+    }
+}

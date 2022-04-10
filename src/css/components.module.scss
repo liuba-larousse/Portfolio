@@ -1,0 +1,115 @@
+@import 'global-variables.module.scss';
+
+.button {
+    width: 30rem;
+    border-radius: 10px;
+    background-color: transparent;
+    border: $border solid $clr-primary;
+    padding: 2rem 0;
+    cursor: pointer;
+    font-family: $secondary-font;
+    font-size: $font-h3;
+    font-weight: 200;
+    color: $clr-primary;
+    text-transform: uppercase;
+    text-align: center;
+    transition: all 0.3s ease-in-out;
+}
+
+.button:hover,
+.button:focus,
+.button:active {
+    background-color: $clr-text-primarly;
+    //    color:$clr-primary;
+    // transform: scale(1.1);
+}
+
+.flash_wait {
+    width: fit-content;
+    border-radius: 10px;
+    background-color: transparent;
+    border: $border solid $clr-primary;
+    padding: 2rem 0;
+    cursor: pointer;
+    font-family: $secondary-font;
+    font-size: $font-h3;
+    font-weight: 200;
+    color: $clr-primary;
+    text-transform: uppercase;
+    text-align: center;
+    animation-name: flash-wait;
+    animation-duration: 30s;
+    animation-fill-mode: both;
+    animation-iteration-count: infinite;
+}
+
+@keyframes flash-wait {
+    // {background-color:$clr-dt-text-primarly}
+    // {background-color:$clr-dt-bkg-darker}
+
+    0% {
+        background-color: $clr-text-primarly;
+    }
+    0.192% {
+        background-color: $clr-bkg-darker;
+    }
+    0.385% {
+        background-color: $clr-text-primarly;
+    }
+    0.577% {
+        background-color: $clr-bkg-darker;
+    }
+    0.769% {
+        background-color: $clr-text-primarly;
+    }
+    1% {
+        background-color: $clr-bkg-darker;
+    }
+    100% {
+        background-color: $clr-bkg-darker;
+    }
+}
+
+.links {
+    display: flex;
+    flex-direction: row;
+    height: fit-content;
+    justify-content: space-between;
+    width: 30rem;
+    margin-top: $marginSm;
+    margin-bottom: $marginLg;
+    & a {
+        color: $clr-primary;
+        font-size: 2.8rem;
+    }
+    & a:hover {
+        animation-name: flash-link;
+        animation-duration: 1s;
+        animation-fill-mode: both;
+    }
+    @keyframes flash-link {
+        0%,
+        50%,
+        100% {
+            color: $clr-text-primarly;
+        }
+        25%,
+        75% {
+            color: $clr-primary;
+        }
+    }
+}
+
+@media (min-width: 36em) {
+    .links {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+}
+@media (min-width: 48em) {
+    .links {
+        a {
+            font-size: 3.5rem;
+        }
+    }
+}
